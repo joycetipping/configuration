@@ -1,0 +1,130 @@
+"Basic
+
+colorscheme nightflower
+
+"Keyboard and screen
+set mouse=a
+set nowrap
+set number
+set ruler
+set showcmd
+set title
+"Editing
+set autoindent
+set expandtab
+set nojoinspaces
+set shiftwidth=2
+set tabstop=2
+"Search options
+set hlsearch
+set ignorecase
+set incsearch
+"Folds
+set foldcolumn=2
+set foldmethod=marker
+"Buffers
+set hidden
+"Highlight trailing whitespace
+set list
+set listchars=tab:\ \ ,trail:·
+"Modeline
+set modeline
+set modelines=5
+
+let mapleader = " "
+
+nnoremap s o<ESC>
+nnoremap S O<ESC>
+nnoremap ' `
+nnoremap ` '
+nnoremap <S-h> gT
+nnoremap <S-l> gt
+nnoremap <C-h> :call TabSlideLeft()<CR>
+nnoremap <C-l> :call TabSlideRight()<CR>
+nnoremap <F7>  :call ToggleTerminalCopyPaste()<CR>
+
+com Dws :%s/\s\+$// "Delete whitespace
+com Wpm call WordProcessorMode()
+
+filetype plugin on
+autocmd BufRead,BufNewFile Gemfile set filetype=ruby
+autocmd BufRead,BufNewFile *.markdown,*.md set filetype=markdown
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 foldcolumn=4
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Functions
+
+function! SyntaxItem()
+  echo synIDattr(synID(line("."),col("."),1),"name")
+endfunction
+
+function! ToggleTerminalCopyPaste()
+  if &paste == 0
+    set mouse=
+    set paste
+    set nonumber
+    echo "Terminal copy & paste enabled"
+  else
+    set mouse=a
+    set nopaste
+    set number
+    echo "Terminal copy & paste disabled"
+  endif
+endfunction
+
+function! TabSlideLeft()
+  " Get current tab number (one-based)
+  let current = tabpagenr()
+
+  " Move tab only if it's not the first
+  " We're subtracting 2 because the "tabm" command is zero-based.
+  if current > 1
+    exec "tabm" . (current - 2)
+  endif
+endfunction
+
+function! TabSlideRight()
+  " Get current tab number (one-based)
+  let current = tabpagenr()
+
+  " Move tab. Since tabm is zero-based, we do not need to add 1.
+  exec "tabm " . current
+endfunction
+
+
+function! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal formatprg=par
+  setlocal linebreak
+  setlocal nolist "Need to disable 'list' to enable 'linebreak'
+  setlocal wrap
+  map j gj
+  map k gk
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Plugins
+
+"Ctags
+set tags=./tags;/                                            "Check for tags file
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "Open in new tab
+"map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>        "Open in vertical split
+
+"Fugitive
+map <F4> :Gblame<CR>
+
+"Nerdtree
+map <F2> :NERDTreeToggle<CR>
+
+"Pathogen
+call pathogen#runtime_append_all_bundles()
+
+"Tlist
+map <F3> :TlistToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Special setups and operating systems
+
+"gVim on Windows
+syntax on
+set bs=2

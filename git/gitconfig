@@ -1,0 +1,14 @@
+[user]
+	name  = Joyce Tipping
+	email = joyce@joycetipping.com
+[alias]
+  br    = branch
+  cdiff = diff --cached
+  ci    = commit -v
+  co    = checkout
+  hist  = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  st    = status
+[color]
+  diff   = auto
+  status = auto
+  branch = auto

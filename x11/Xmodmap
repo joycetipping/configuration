@@ -1,0 +1,2 @@
+! Left option key behaves like Alt
+keycode 66 = Alt_L

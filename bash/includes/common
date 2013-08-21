@@ -1,0 +1,51 @@
+# vim: syntax=sh :
+
+# Exiftool
+# --------
+dates () {
+  # Print all EXIF date fields
+  exiftool $1 | grep -i 'date'
+}
+
+
+# Git
+# ---
+source "$conf/git/git-completion.bash"
+
+
+# R
+# -
+export R_LIBS="$HOME/.R:$R_LIBS"
+
+
+# RVM
+# ---
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+cd .
+
+
+# SSH
+# ---
+ssh-add > /dev/null 2>&1
+
+
+# Miscellaneous
+# -------------
+count () {
+  # Count the number of files in the given directories
+  if [[ "$#" == "0" ]]
+  then
+    ls | wc -l
+  else
+    for var in "$@";
+    do
+      ls "$var" | wc -l
+    done
+  fi
+}
+
+csum () {
+  # Sum the number of files in the given directories
+  count "$@" | awk '{s+=$1} END {print s}'
+}

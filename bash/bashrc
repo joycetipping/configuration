@@ -1,0 +1,37 @@
+# ~/.bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Define two very important variables
+export home="$HOME"
+export conf="$home/projects/configuration"
+
+# If running over ssh, open a tmux session
+if [[ -f "$conf/bash/includes/tmux" ]]; then source "$conf/bash/includes/tmux"; fi
+
+# Adjust the path
+if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH" # Use the Gnu coreutils instead of the BSD ones
+
+# Terminal settings
+eval $(dircolors $conf/bash/includes/dir_colors)  # display broken symlinks
+export EDITOR="/usr/bin/vim"
+export VISUAL="/usr/bin/vim"
+export LC_CTYPE='en_US.utf-8'
+export TERM='xterm-color'
+
+# Bash history
+HISTCONTROL=ignoredups:ignorespace    # Don't put duplicate lines in the history.
+shopt -s histappend                   # Append to the history file, don't overwrite it
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# Bash prompt
+source "$conf/bash/includes/prompt"
+
+# Source aliases and program-specific functions
+if [[ -f "$conf/bash/includes/aliases"   ]];                                then source "$conf/bash/includes/aliases"; fi
+if [[ -f "$conf/bash/includes/common"    ]];                                then source "$conf/bash/includes/common";  fi
+if [[ -f "$conf/bash/includes/linux"     ]] && [[ "$system" == 'Linux'  ]]; then source "$conf/bash/includes/linux";   fi
+if [[ -f "$conf/bash/includes/mac"       ]] && [[ "$system" == 'Darwin' ]]; then source "$conf/bash/includes/mac";     fi

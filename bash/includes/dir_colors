@@ -1,0 +1,2 @@
+# Extra dircolors entries (mainly to restore broken symlink colors)
+ORPHAN 40;1;31

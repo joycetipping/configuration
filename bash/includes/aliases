@@ -1,0 +1,49 @@
+# vim: syntax=sh :
+
+# Bash
+alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
+alias cpl="cp -d"
+alias ct="ctags -R"
+alias l='ls -CF'
+alias la="ls -a"
+alias ll="ls -ilh"
+alias ls="ls --color=auto"
+alias lst="ls -tr"
+alias now="date +%Y.%m%d.%H%M"
+alias remove="/bin/rm"
+alias rm="echo Use remove"
+alias s="ls"
+alias sudoasme="sudo -u joyce"
+alias sus='sudo pm-suspend'
+alias u="cd ../"
+alias u2="cd ../../"
+alias u3="cd ../../../"
+alias u4="cd ../../../../"
+alias u5="cd ../../../../../"
+alias u6="cd ../../../../../../"
+alias u7="cd ../../../../../../../"
+alias u8="cd ../../../../../../../../"
+
+# Applications
+alias bc="echo Starting bc -l;echo;bc -l"
+alias brake="bundle exec rake"
+alias sqlite3="sqlite3 -column -header"
+alias sqlite="sqlite3 -column -header"
+alias vt="vim -t"
+
+# Places
+alias aliases="vim $conf/bash/includes/aliases"
+alias blog="cd $home/projects/blog/"
+alias cdh="cd $home"
+alias conf="cd $conf"
+alias dreams="vim $home/projects/life/dreams/$(date '+%Y').txt"
+alias journal="cd $home/projects/life/journal/"
+alias music="cd $home/library/music"
+alias musings="vim $home/projects/musings/2011.txt"
+alias notes="cd $home/projects/notes/"
+alias projects="cd $home/projects/"
+alias programs="cd $home/projects/programs/"
+alias recipes="cd $home/projects/recipes/"
+alias safe="cd $home/projects/safe/"
+alias songs="cd $home/library/music/songs"
+alias website="cd $home/projects/joycetipping.com/"

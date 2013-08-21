@@ -1,0 +1,143 @@
+set mouse=a
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+	finish
+endif
+
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+"
+" Default Vim settings
+"
+
+set t_Co=8
+set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
+"set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
+syntax on
+set hlsearch
+
+set ts=2 sw=2 ai
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+	if exists ("+omnifunc")
+		autocmd Filetype *
+			\ if &omnifunc == "" |
+			\	setlocal omnifunc=syntaxcomplete#Complete |
+			\ endif
+	endif
+
+	" Enable file type detection.
+	" Use the default filetype settings, so that mail gets 'tw' set to 72,
+	" 'cindent' is on in C files, etc.
+	" Also load indent files, to automatically do language-dependent indenting.
+	filetype plugin indent on
+
+	" Put these in an autocmd group, so that we can delete them easily.
+	augroup vimrcEx
+		au!
+
+		" For all text files set 'textwidth' to 144 characters.
+		autocmd FileType text setlocal textwidth=144
+
+		" When editing a file, always jump to the last known cursor position.
+		" Don't do it when the position is invalid or when inside an event handler
+		" (happens when dropping a file on gvim).
+		autocmd BufReadPost *
+					\ if line("'\"") > 0 && line("'\"") <= line("$") |
+					\   exe "normal g`\"" |
+					\ endif
+
+	augroup END
+
+else
+
+	set autoindent		" always set autoindenting on
+
+endif " has("autocmd")
+
+"
+" End of default Vim settings
+"
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+set nobackup
+set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set incsearch		" do incremental searching
+
+set encoding=utf-8
+set tenc=utf-8
+set fillchars= 
+
+let scalafile = "~/.vim/syntax/scala.vim"
+
+set foldmethod=syntax
+set foldcolumn=4
+set foldlevel=20
+set foldminlines=2
+set foldopen=hor,insert,jump,mark,search,undo
+set foldclose=
+set foldtext=v:folddashes.getline(v:foldstart)
+set nowrap
+
+function! OutlineMode()
+	highlight Comment ctermfg=darkblue
+	highlight Folded ctermfg=gray
+	highlight Statement ctermfg=darkyellow
+	highlight Keyword ctermfg=darkyellow
+	highlight Operator ctermfg=gray
+	highlight Special ctermfg=gray
+	highlight Number ctermfg=gray
+	highlight Float ctermfg=gray
+	highlight String ctermfg=gray
+	highlight Function ctermfg=darkmagenta
+	highlight Define ctermfg=darkyellow
+	highlight Type ctermfg=gray
+	highlight Operator ctermfg=gray
+	highlight Constant ctermfg=gray
+	highlight Exception ctermfg=darkyellow
+	highlight Include ctermfg=gray
+	highlight PreProc ctermfg=gray
+	highlight Identifier ctermfg=gray
+	highlight Normal ctermfg=gray
+	highlight FoldColumn ctermfg=gray
+	highlight VertSplit ctermbg=black
+
+	set foldminlines=1
+	set nonumber
+endfunction
+
+function! CodeMode()
+	highlight clear
+
+	highlight FoldColumn ctermbg=16*
+	highlight Folded ctermbg=16*
+
+	highlight Todo ctermbg=16 ctermfg=cyan
+
+	highlight VertSplit ctermbg=0
+	highlight Search ctermbg=14
+
+	highlight DiffAdd ctermbg=12
+	highlight DiffChange ctermbg=15
+	highlight DiffDelete ctermbg=16 ctermfg=9
+	highlight DiffText ctermbg=10
+
+	set number
+endfunction
+
+call CodeMode()
+
+map <silent> <F3> :if &number \| :call OutlineMode() \| else \| call CodeMode() \| end<CR>
+map <silent> <F4> :if &foldmethod=="syntax" \| set foldmethod=marker \| else \| set foldmethod=syntax \| end<CR>
+map <silent> <F2> :set foldlevel+=-1<CR>
+map <silent> <F5> :set foldlevel+=1<CR>
+map <silent> <S-F5> :set foldlevel=0<CR>
