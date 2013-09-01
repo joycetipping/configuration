@@ -4,7 +4,12 @@
 # --------
 dates () {
   # Print all EXIF date fields
-  exiftool $1 | grep -i 'date'
+  for var in "$@";
+  do
+    echo "$var"
+    exiftool "$var" | grep -i 'date'
+    echo
+  done
 }
 
 
