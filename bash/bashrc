@@ -7,9 +7,6 @@
 export home="$HOME"
 export conf="$home/projects/configuration"
 
-# If running over ssh, open a tmux session
-if [[ -f "$conf/bash/includes/tmux" ]]; then source "$conf/bash/includes/tmux"; fi
-
 # Adjust the path
 if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH" # Use the Gnu coreutils instead of the BSD ones
