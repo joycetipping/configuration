@@ -9,7 +9,7 @@ export conf="$home/projects/configuration"
 
 # Adjust the path
 if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH" # Use the Gnu coreutils instead of the BSD ones
+if [[ "$(uname)" == 'Darwin' ]]; then PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"; fi # If on a Mac, use the Gnu coreutils instead of the BSD ones
 
 # Terminal settings
 eval $(dircolors $conf/bash/includes/dir_colors)  # display broken symlinks
