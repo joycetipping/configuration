@@ -30,5 +30,5 @@ source "$conf/bash/includes/prompt"
 # Source aliases and program-specific functions
 if [[ -f "$conf/bash/includes/aliases"   ]];                                then source "$conf/bash/includes/aliases"; fi
 if [[ -f "$conf/bash/includes/common"    ]];                                then source "$conf/bash/includes/common";  fi
-if [[ -f "$conf/bash/includes/linux"     ]] && [[ "$system" == 'Linux'  ]]; then source "$conf/bash/includes/linux";   fi
-if [[ -f "$conf/bash/includes/mac"       ]] && [[ "$system" == 'Darwin' ]]; then source "$conf/bash/includes/mac";     fi
+if [[ -f "$conf/bash/includes/linux"     ]] && [[ "$(uname)" == 'Linux'  ]]; then source "$conf/bash/includes/linux";  fi
+if [[ -f "$conf/bash/includes/mac"       ]] && [[ "$(uname)" == 'Darwin' ]]; then source "$conf/bash/includes/mac";    fi
