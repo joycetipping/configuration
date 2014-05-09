@@ -149,11 +149,6 @@
       <shade>no</shade>
     </application>
 
-    <application name='audacious'>
-      <desktop>all</desktop>
-      <layer>normal</layer>
-    </application>
-
     <application name='Conky'>
       <layer>below</layer>
     </application>
