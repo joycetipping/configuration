@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <openbox_config xmlns="http://openbox.org/3.4/rc">
-  <resistance><strength>10</strength>
-              <screen_edge_strength>20</screen_edge_strength></resistance>
+  <resistance>
+    <strength>10</strength>
+    <screen_edge_strength>20</screen_edge_strength>
+  </resistance>
 
-  <focus><focusNew>yes</focusNew>
-         <followMouse>yes</followMouse>
-         <focusLast>yes</focusLast>
-         <underMouse>yes</underMouse>
-         <focusDelay>0</focusDelay>
-         <raiseOnFocus>no</raiseOnFocus></focus>
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>yes</followMouse>
+    <focusLast>yes</focusLast>
+    <underMouse>yes</underMouse>
+    <focusDelay>0</focusDelay>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
 
-  <placement><policy>Smart</policy></placement>
+  <placement>
+    <policy>Smart</policy>
+  </placement>
 
-  <theme><keepBorder>no</keepBorder></theme>
+  <theme>
+    <keepBorder>no</keepBorder>
+  </theme>
 
-  <desktops><number>100</number>
-            <firstdesk>1</firstdesk>
-            <popupTime>150</popupTime></desktops>
+  <desktops>
+    <number>100</number>
+    <firstdesk>1</firstdesk>
+    <popupTime>150</popupTime>
+  </desktops>
 
-  <resize><drawContents>no</drawContents>
-          <popupShow>Nonpixel</popupShow>
-          <popupPosition>Center</popupPosition></resize>
+  <resize>
+    <drawContents>no</drawContents>
+    <popupShow>Nonpixel</popupShow>
+    <popupPosition>Center</popupPosition>
+  </resize>
 
-  <margins><top>0</top>
-           <bottom>0</bottom>
-           <left>0</left>
-           <right>0</right></margins>
+  <margins>
+    <top>0</top>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
+  </margins>
 
   <keyboard>
     <!-- General -->
@@ -84,47 +99,63 @@
     <context name="Frame">
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
-        <action name="Raise"/></mousebind>
+        <action name="Raise"/>
+      </mousebind>
 
       <mousebind button="A-Left" action="Drag">
-        <action name="Move"/></mousebind>
+        <action name="Move"/>
+      </mousebind>
 
       <mousebind button="A-S-Left" action="Drag">
-        <action name="Resize"/></mousebind>
+        <action name="Resize"/>
+      </mousebind>
     </context>
 
     <context name="Client">
       <mousebind button="Left" action="Press">
         <action name="Focus"/>
-        <action name="Raise"/></mousebind>
+        <action name="Raise"/>
+      </mousebind>
 
       <mousebind button="Middle" action="Press">
         <action name="Focus"/>
-        <action name="Raise"/></mousebind>
+        <action name="Raise"/>
+      </mousebind>
 
       <mousebind button="Right" action="Press">
         <action name="Focus"/>
-        <action name="Raise"/></mousebind>
+        <action name="Raise"/>
+      </mousebind>
     </context>
 
     <context name="Root">
       <mousebind button="Right" action="Press">
-        <action name="ShowMenu"><menu>root-menu</menu></action></mousebind>
+        <action name="ShowMenu"><menu>root-menu</menu></action>
+      </mousebind>
     </context>
   </mouse>
 
-  <menu><file>menu.xml</file>
-        <hideDelay>200</hideDelay>
-        <middle>no</middle>
-        <submenuShowDelay>100</submenuShowDelay>
-        <applicationIcons>no</applicationIcons></menu>
+  <menu>
+    <file>menu.xml</file>
+    <hideDelay>200</hideDelay>
+    <middle>no</middle>
+    <submenuShowDelay>100</submenuShowDelay>
+    <applicationIcons>no</applicationIcons>
+  </menu>
 
   <applications>
-    <application name='*'><decor>no</decor>
-                          <shade>no</shade></application>
+    <application name='*'>
+      <decor>no</decor>
+      <shade>no</shade>
+    </application>
 
-    <application name='audacious'><desktop>all</desktop>
-                                  <layer>normal</layer></application>
-    <application name='Conky'><layer>below</layer></application>
+    <application name='audacious'>
+      <desktop>all</desktop>
+      <layer>normal</layer>
+    </application>
+
+    <application name='Conky'>
+      <layer>below</layer>
+    </application>
   </applications>
 </openbox_config>
