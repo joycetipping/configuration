@@ -14,7 +14,6 @@ ln -sf $conf/bash/xinitrc          $HOME/.xinitrc
 ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 
 ln -sf $conf/x11/Xmodmap           $HOME/.Xmodmap
-ln -sf $conf/openbox               $HOME/.config/openbox
+ln -sf $conf/openbox/rc.xml        $HOME/.config/openbox/rc.xml
 
 rm $HOME/.vim/vim
-rm $HOME/.config/openbox/openbox
