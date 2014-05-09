@@ -1,0 +1,20 @@
+#!/bin/bash
+#if [[ "$(uname)" == 'Linux' ]];
+  openbox &
+  wm_pid=$!
+
+  init_session() {
+    xset r rate 150 30
+    setlayout 0 10 10 0
+    xrdb ~/.Xresources
+    lxsession &
+    xcompmgr &
+
+    gnome-terminal &
+    nitrogen --set-zoom-fill ~/backgrounds/cn.jpg
+  }
+
+  sleep 2 && init_session
+
+  wait $wm_pid
+#fi
