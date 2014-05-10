@@ -17,5 +17,6 @@ ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 ln -sf $conf/x11/Xmodmap           $HOME/.Xmodmap
 ln -sf $conf/openbox               $HOME/.config/openbox
 
+rm $HOME/.emacs.d/emacs.d
 rm $HOME/.vim/vim
 rm $HOME/.config/openbox/openbox
