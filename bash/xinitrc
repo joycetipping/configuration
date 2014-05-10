@@ -5,13 +5,13 @@
 
   init_session() {
     xset r rate 150 30
-    setlayout 0 10 10 0
+    ~/.config/openbox/set-desktop-grid 0 10 10 0
+    nitrogen --set-zoom-fill ~/.config/openbox/background.jpg
     xrdb ~/.Xresources
     lxsession &
     xcompmgr &
 
     gnome-terminal &
-    nitrogen --set-zoom-fill ~/backgrounds/cn.jpg
   }
 
   sleep 2 && init_session
