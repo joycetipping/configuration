@@ -49,6 +49,7 @@ com Wpm call WordProcessorMode()
 filetype plugin on
 autocmd BufRead,BufNewFile Gemfile set filetype=ruby
 autocmd BufRead,BufNewFile *.markdown,*.md set filetype=markdown
+autocmd BufRead,BufNewFile *.clojure,*.clj,*.edn set filetype=clojure
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 foldcolumn=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
