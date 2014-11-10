@@ -24,6 +24,6 @@ non-ascii font: monaco 11
 3 (green) ----   0 255   0  (0f0 green)
 4 (yellow) --- 255 255  85  (ff5 light yellow)
 5 (blue) ----- 102 170 255  (6af light blue)
-6 (magenta) -- 238 136 238  (38e light purple)
+6 (magenta) -- 238 136 238  (e8e light purple)
 7 (cyan) -----   0 255 255  (0ff bright cyan)
 8 (gray) ----- 255 204 255  (fcf very light pink)
