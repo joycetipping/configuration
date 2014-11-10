@@ -32,10 +32,16 @@ alias sqlite="sqlite3 -column -header"
 alias vt="vim -t"
 
 # Places
+alias 4clojure="cd $home/projects/programs/clojure/4clojure/"
 alias aliases="vim $conf/bash/includes/aliases"
 alias blog="cd $home/projects/blog/"
+alias bread="cd $home/projects/bread/"
+alias career="cd $home/projects/career/"
 alias cdh="cd $home"
+alias chat="ssh tmuxchat@ec2-54-200-28-156.us-west-2.compute.amazonaws.com"
 alias conf="cd $conf"
+alias diary="cd $home/projects/life/diary/"
+alias drafts='cd $home/projects/blog/_drafts; vim ./'
 alias dreams="vim $home/projects/life/dreams/$(date '+%Y').txt"
 alias journal="cd $home/projects/life/journal/"
 alias music="cd $home/library/music"
