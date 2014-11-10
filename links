@@ -3,20 +3,17 @@
 export home="$HOME"
 export conf="$home/projects/configuration"
 
-ln -sf $conf/emacs/emacs           $HOME/.emacs
-ln -sf $conf/emacs/emacs.d         $HOME/.emacs.d
+ln -sf $conf/emacs                 $HOME/.emacs
 ln -sf $conf/vim/vimrc             $HOME/.vimrc
 ln -sf $conf/vim/vim               $HOME/.vim
 
 ln -sf $conf/bash/bashrc           $HOME/.bashrc
 ln -sf $conf/bash/bash_profile     $HOME/.bash_profile
-ln -sf $conf/bash/xinitrc          $HOME/.xinitrc
 
 ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 
 ln -sf $conf/x11/Xmodmap           $HOME/.Xmodmap
 ln -sf $conf/openbox               $HOME/.config/openbox
 
-rm $HOME/.emacs.d/emacs.d
 rm $HOME/.vim/vim
 rm $HOME/.config/openbox/openbox
