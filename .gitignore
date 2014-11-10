@@ -1,4 +1,5 @@
 *.swp
+*.swo
 .netrwhist
 .DS_Store
 openbox/background.jpg
