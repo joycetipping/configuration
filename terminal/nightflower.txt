@@ -1,23 +1,12 @@
 Nightflower
 
-   foreground: 255 204 255 (very light pink)
-   background:   0   0   0 (black)
-         bold: 255   0   0 (red)
-    selection: 181 213 255 (blue)
-selected text:   0   0   0 (black)
-       cursor: 255 204 255 (very light pink)
-  cursor text: 255 204 255 (very light pink)
+   foreground: 255 204 255  (very light pink)
+   background:   0   0   0  (black)
+    selection: 181 213 255  (blue)
+selected text:   0   0   0  (black)
+       cursor: 255 204 255  (very light pink)
+  cursor text: 255 204 255  (very light pink)
 
-background img: false
-  transparency: 0%
-  disable bold: true
-          font: monaco 11
-non-ascii font: monaco 11
-          blur: false
- anti-aliasing: true
-
-11" air: 165x50
-15" pro:
 
 1 (black) ----   0   0   0  (000 black)
 2 (red) ------ 255   0 255  (f0f bright magenta)
