@@ -1,0 +1,18 @@
+#!/bin/bash
+
+openbox &
+wm_pid=$!
+
+init_session() {
+  ~/.config/openbox/set-desktop-grid 0 10 10 0
+  nitrogen --set-zoom-fill ~/.config/openbox/background.jpg
+  xrdb ~/.Xresources
+  xset r rate 150 30
+
+  gnome-terminal &
+  lxsession &
+  xcompmgr &
+}
+
+sleep 2 && init_session
+wait $wm_pid
