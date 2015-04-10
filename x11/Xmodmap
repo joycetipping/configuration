@@ -1,17 +1,5 @@
-! Mac:
 ! Make option keys behave like Alt
+! This is to make Inkscape behave properly on XQuartz on the Mac.
+! Don't use this on Linux: It will royally mess up your alt keys. (As of Ubuntu 15.04 running Openbox 3.5.2.)
 keycode 66 = Alt_L
 keycode 69 = Alt_R
-
-! VirtualBox:
-! Swap Control and Cmd
-!clear control
-!clear mod4
-!keycode 105 =
-!keycode 206 =
-!keycode 133 = Control_L NoSymbol Control_L
-!keycode 134 = Control_R NoSymbol Control_R
-!keycode  37 = Super_L NoSymbol Super_L
-!add control = Control_L
-!add control = Control_R
-!add mod4 = Super_L
