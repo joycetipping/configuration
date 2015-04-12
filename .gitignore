@@ -1,6 +1,7 @@
-*.swp
 *.swo
-.netrwhist
+*.swp
 .DS_Store
+.netrwhist
+conky/conkyrc
 openbox/background.jpg
 openbox/set-desktop-grid
