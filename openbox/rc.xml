@@ -53,17 +53,16 @@
     <!--<keybind key='W-S-q'><action name='Execute'><command>locksleep</command></action></keybind>[> suspend and lock <]-->
     <keybind key='W-S-o'><action name='Execute'><command>in 1 xset dpms force off</command></action></keybind><!-- turn screen off -->
 
-    <!-- Need to debug!! -->
-    <!--<keybind key='C-W-Up'><action name='Execute'><command>backlight +100</command></action></keybind>-->
-    <!--<keybind key='C-W-Down'><action name='Execute'><command>backlight -100</command></action></keybind>-->
-    <!--<keybind key='S-C-W-Up'><action name='Execute'><command>backlight +5</command></action></keybind>-->
-    <!--<keybind key='S-C-W-Down'><action name='Execute'><command>backlight -5</command></action></keybind>-->
-    <!--<keybind key='W-Down'><action name='Execute'><command>vol-delta -5</command></action></keybind>-->
-    <!--<keybind key='W-Up'><action name='Execute'><command>vol-delta 5</command></action></keybind>-->
-    <!--<keybind key='W-S-Left'><action name='Execute'><command>vol-absolute 0</command></action></keybind>-->
-    <!--<keybind key='W-S-Right'><action name='Execute'><command>vol-absolute 47</command></action></keybind>-->
-    <!--<keybind key='W-Left'><action name='Execute'><command>vol-absolute 24</command></action></keybind>-->
-    <!--<keybind key='W-Right'><action name='Execute'><command>vol-absolute 41</command></action></keybind>-->
+    <keybind key='XF86MonBrightnessUp'><action name='Execute'><command>backlight +100</command></action></keybind>
+    <keybind key='XF86MonBrightnessDown'><action name='Execute'><command>backlight -100</command></action></keybind>
+    <keybind key='S-XF86MonBrightnessUp'><action name='Execute'><command>backlight +5</command></action></keybind>
+    <keybind key='S-XF86MonBrightnessDown'><action name='Execute'><command>backlight -5</command></action></keybind>
+
+    <keybind key='XF86AudioRaiseVolume'><action name='Execute'><command>vol-up</command></action></keybind>
+    <keybind key='XF86AudioLowerVolume'><action name='Execute'><command>vol-down</command></action></keybind>
+    <keybind key='S-XF86AudioRaiseVolume'><action name='Execute'><command>vol-up-big</command></action></keybind>
+    <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-down-big</command></action></keybind>
+    <keybind key='XF86AudioMute'><action name='Execute'><command>vol-mute</command></action></keybind>
 
     <!-- Keybindings for windows -->
     <keybind key="A-F4"><action name="Close"/></keybind>
