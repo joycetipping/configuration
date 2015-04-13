@@ -45,13 +45,11 @@
   <keyboard>
     <!-- General -->
     <chainQuitKey>C-g</chainQuitKey>
-    <keybind key="W-space"><action name="ShowMenu"><menu>root-menu</menu></action></keybind>
-    <keybind key='W-n'><action name='Execute'><command>synclient TouchpadOff=1</command></action></keybind>
-    <keybind key='W-S-n'><action name='Execute'><command>synclient TouchpadOff=0</command></action></keybind>
+    <keybind key='W-m'><action name='Execute'><command>synclient TouchpadOff=1</command></action></keybind>
+    <keybind key='W-S-m'><action name='Execute'><command>synclient TouchpadOff=0</command></action></keybind>
 
     <keybind key="W-q"><action name="Execute"><command>xtrlock</command></action></keybind>
     <!--<keybind key='W-S-q'><action name='Execute'><command>locksleep</command></action></keybind>[> suspend and lock <]-->
-    <keybind key='W-S-o'><action name='Execute'><command>in 1 xset dpms force off</command></action></keybind><!-- turn screen off -->
 
     <keybind key='XF86MonBrightnessUp'><action name='Execute'><command>backlight +100</command></action></keybind>
     <keybind key='XF86MonBrightnessDown'><action name='Execute'><command>backlight -100</command></action></keybind>
@@ -64,37 +62,33 @@
     <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-down-big</command></action></keybind>
     <keybind key='XF86AudioMute'><action name='Execute'><command>vol-mute</command></action></keybind>
 
+    <!-- Keybindings for menus and dialogs-->
+    <keybind key="A-F2"><action name="Execute"><command>gmrun</command></action></keybind>
+    <keybind key="W-space"><action name="Execute"><command>gmrun</command></action></keybind>
+    <keybind key="S-W-space"><action name="ShowMenu"><menu>client-menu</menu></action></keybind>
+    <keybind key="C-W-A-space"><action name="ShowMenu"><menu>root-menu</menu></action></keybind>
+
     <!-- Keybindings for windows -->
     <keybind key="A-F4"><action name="Close"/></keybind>
-    <keybind key="S-W-space"><action name="ShowMenu"><menu>client-menu</menu></action></keybind>
 
     <keybind key='W-s'><action name='ToggleOmnipresent'></action></keybind>
     <keybind key="W-d"><action name="ToggleShowDesktop"/></keybind>
+    <keybind key='W-f'><action name='ToggleMaximize'></action></keybind>
     <keybind key='W-v'><action name='ToggleMaximizeVert'></action></keybind>
     <keybind key='W-g'><action name='ToggleMaximizeHorz'></action></keybind>
 
-    <keybind key='W-e'><action name='MoveResizeTo'><width client='yes'>402</width></action></keybind><!-- 80 columns -->
-    <keybind key='W-S-e'><action name='MoveResizeTo'><width client='yes'>1212</width></action></keybind><!-- 242 columns -->
-    <keybind key='W-8'><action name='MoveResizeTo'><x>48</x><y>12</y><height>590</height></action></keybind>
-    <keybind key='W-9'><action name='MoveResizeTo'><x>462</x><y>12</y><height>482</height></action></keybind>
-    <keybind key='W-0'><action name='MoveResizeTo'><x>876</x><y>12</y><height>566</height></action></keybind>
-    <keybind key='W-bracketright'><action name='MoveResizeTo'><x>920</x><y>36</y><height>242</height></action></keybind>
-    <keybind key='W-apostrophe'><action name='MoveResizeTo'><x>920</x><y>280</y></action></keybind>
-    <keybind key='W-slash'><action name='MoveResizeTo'><x>920</x><y>524</y></action></keybind>
+    <keybind key='W-e'><action name='MoveResizeTo'><width client='yes'>642</width></action></keybind><!-- 80 columns -->
+    <keybind key='W-S-e'><action name='MoveResizeTo'><width client='yes'>1282</width></action></keybind><!-- 160 columns -->
 
     <!-- Keybindings for applications -->
-    <keybind key="A-F2"><action name="Execute"><command>gmrun</command></action></keybind>
-    <keybind key="A-space"><action name="Execute"><command>gmrun</command></action></keybind>
-
     <keybind key="W-t"><action name="Execute"><command>gnome-terminal</command></action></keybind>
     <keybind key="W-w"><action name="Execute"><command>google-chrome</command></action></keybind>
 
-
     <!-- Keybindings for desktop switching -->
-    <keybind key='W-i'><action name='GoToDesktop'><to>24</to></action></keybind>
-    <keybind key='W-o'><action name='GoToDesktop'><to>37</to></action></keybind>
-    <keybind key='W-m'><action name='GoToDesktop'><to>54</to></action></keybind>
-    <keybind key='W-comma'><action name='GoToDesktop'><to>67</to></action></keybind>
+    <keybind key='W-7'><action name='GoToDesktop'><to>24</to></action></keybind>
+    <keybind key='W-8'><action name='GoToDesktop'><to>37</to></action></keybind>
+    <keybind key='W-9'><action name='GoToDesktop'><to>54</to></action></keybind>
+    <keybind key='W-0'><action name='GoToDesktop'><to>67</to></action></keybind>
 
     <keybind key="W-h"><action name="DesktopLeft"/></keybind>
     <keybind key="W-l"><action name="DesktopRight"/></keybind>
