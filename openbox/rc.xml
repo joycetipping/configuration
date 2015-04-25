@@ -49,17 +49,17 @@
     <keybind key='W-S-m'><action name='Execute'><command>synclient TouchpadOff=0</command></action></keybind>
 
     <keybind key="W-q"><action name="Execute"><command>xtrlock</command></action></keybind>
-    <!--<keybind key='W-S-q'><action name='Execute'><command>locksleep</command></action></keybind>[> suspend and lock <]-->
+    <keybind key='W-S-q'><action name='Execute'><command>locksleep</command></action></keybind><!-- suspend and lock -->
 
     <keybind key='XF86MonBrightnessUp'><action name='Execute'><command>backlight +100</command></action></keybind>
     <keybind key='XF86MonBrightnessDown'><action name='Execute'><command>backlight -100</command></action></keybind>
     <keybind key='S-XF86MonBrightnessUp'><action name='Execute'><command>backlight +5</command></action></keybind>
     <keybind key='S-XF86MonBrightnessDown'><action name='Execute'><command>backlight -5</command></action></keybind>
 
-    <keybind key='XF86AudioRaiseVolume'><action name='Execute'><command>vol-up</command></action></keybind>
-    <keybind key='XF86AudioLowerVolume'><action name='Execute'><command>vol-down</command></action></keybind>
-    <keybind key='S-XF86AudioRaiseVolume'><action name='Execute'><command>vol-up-big</command></action></keybind>
-    <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-down-big</command></action></keybind>
+    <keybind key='XF86AudioRaiseVolume'><action name='Execute'><command>vol-set 1 +5%</command></action></keybind>
+    <keybind key='XF86AudioLowerVolume'><action name='Execute'><command>vol-set 1 -5%</command></action></keybind>
+    <keybind key='S-XF86AudioRaiseVolume'><action name='Execute'><command>vol-set 1 +20%</command></action></keybind>
+    <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-set 1 -20%</command></action></keybind>
     <keybind key='XF86AudioMute'><action name='Execute'><command>vol-mute</command></action></keybind>
 
     <!-- Keybindings for menus and dialogs-->
@@ -77,18 +77,26 @@
     <keybind key='W-v'><action name='ToggleMaximizeVert'></action></keybind>
     <keybind key='W-g'><action name='ToggleMaximizeHorz'></action></keybind>
 
-    <keybind key='W-e'><action name='MoveResizeTo'><width client='yes'>642</width></action></keybind><!-- 80 columns -->
-    <keybind key='W-S-e'><action name='MoveResizeTo'><width client='yes'>1282</width></action></keybind><!-- 160 columns -->
+    <keybind key='W-0'><action name='MoveResizeTo'><x>0</x><y>0</y></action></keybind>
+    <keybind key='W-1'><action name='MoveResizeTo'><x>0</x></action></keybind>
+    <keybind key='W-2'><action name='MoveResizeTo'><x>639</x></action></keybind>
+    <keybind key='W-3'><action name='MoveResizeTo'><x>1278</x></action></keybind>
+    <keybind key='W-7'><action name='MoveResizeTo'><y>0</y></action></keybind>
+    <keybind key='W-8'><action name='MoveResizeTo'><y>355</y></action></keybind>
+    <keybind key='W-9'><action name='MoveResizeTo'><y>710</y></action></keybind>
+    <keybind key='W-minus'><action name='MoveResizeTo'><width>642</width></action></keybind>
+    <keybind key='W-equal'><action name='MoveResizeTo'><width>1284</width></action></keybind>
 
     <!-- Keybindings for applications -->
     <keybind key="W-t"><action name="Execute"><command>gnome-terminal</command></action></keybind>
     <keybind key="W-w"><action name="Execute"><command>google-chrome</command></action></keybind>
 
     <!-- Keybindings for desktop switching -->
-    <keybind key='W-7'><action name='GoToDesktop'><to>24</to></action></keybind>
-    <keybind key='W-8'><action name='GoToDesktop'><to>37</to></action></keybind>
-    <keybind key='W-9'><action name='GoToDesktop'><to>54</to></action></keybind>
-    <keybind key='W-0'><action name='GoToDesktop'><to>67</to></action></keybind>
+    <keybind key='W-p'><action name='GoToDesktop'><to>23</to></action></keybind>
+    <keybind key='W-bracketleft'><action name='GoToDesktop'><to>28</to></action></keybind>
+    <keybind key='W-semicolon'><action name='GoToDesktop'><to>45</to></action></keybind>
+    <keybind key='W-period'><action name='GoToDesktop'><to>78</to></action></keybind>
+    <keybind key='W-slash'><action name='GoToDesktop'><to>73</to></action></keybind>
 
     <keybind key="W-h"><action name="DesktopLeft"/></keybind>
     <keybind key="W-l"><action name="DesktopRight"/></keybind>
@@ -111,17 +119,17 @@
     <keybind key="S-W-Down"><action name="SendToDesktopDown"/></keybind>
 
     <!-- Keybindings for window switching -->
-    <keybind key="A-Tab"><action name="NextWindow"/></keybind>
-    <keybind key="A-S-Tab"><action name="PreviousWindow"/></keybind>
+    <keybind key="W-Tab"><action name="NextWindow"/></keybind>
+    <keybind key="W-S-Tab"><action name="PreviousWindow"/></keybind>
 
-    <keybind key="W-Tab"><action name="NextWindow"><allDesktops>yes</allDesktops></action></keybind>
-    <keybind key="W-S-Tab"><action name="PreviousWindow"><allDesktops>yes</allDesktops></action></keybind>
+    <keybind key="A-Tab"><action name="NextWindow"><allDesktops>yes</allDesktops></action></keybind>
+    <keybind key="A-S-Tab"><action name="PreviousWindow"><allDesktops>yes</allDesktops></action></keybind>
   </keyboard>
 
   <mouse>
     <dragThreshold>2</dragThreshold>
     <doubleClickTime>200</doubleClickTime>
-    <screenEdgeWarpTime>150</screenEdgeWarpTime>
+    <screenEdgeWarpTime>0</screenEdgeWarpTime><!-- disable desktop flipping when dragging windows -->
 
     <context name="Frame">
       <mousebind button="A-Left" action="Press">
