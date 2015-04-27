@@ -1,5 +1,9 @@
 # vim: syntax=sh :
 
+# Adjust path
+# -------
+if [[ "$(uname)" == 'Darwin' ]]; then PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"; fi # If on a Mac, use the Gnu coreutils instead of the BSD ones
+
 # Brew
 # ----
 PATH="$PATH:/usr/X11/bin"

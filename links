@@ -12,8 +12,15 @@ ln -sf $conf/bash/bash_profile     $HOME/.bash_profile
 
 ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 
-ln -sf $conf/x11/Xmodmap           $HOME/.Xmodmap
-ln -sf $conf/openbox               $HOME/.config/openbox
+if [[ "$(uname)" == 'Linux'  ]]; then
+  ln -sf $conf/bash/xinitrc        $HOME/.xinitrc
+  ln -sf $conf/conky/conkyrc       $HOME/.conkyrc
+  ln -sf $conf/openbox             $HOME/.config/openbox
+fi
+
+if [[ "$(uname)" == 'Darwin'  ]]; then
+  ln -sf $conf/x11/Xmodmap         $HOME/.Xmodmap
+fi
 
 rm $HOME/.vim/vim
 rm $HOME/.config/openbox/openbox
