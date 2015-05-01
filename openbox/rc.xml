@@ -45,11 +45,11 @@
   <keyboard>
     <!-- General -->
     <chainQuitKey>C-g</chainQuitKey>
-    <keybind key='W-m'><action name='Execute'><command>synclient TouchpadOff=1</command></action></keybind>
-    <keybind key='W-S-m'><action name='Execute'><command>synclient TouchpadOff=0</command></action></keybind>
+    <keybind key='W-p'><action name='Execute'><command>synclient TouchpadOff=1</command></action></keybind>
+    <keybind key='W-S-p'><action name='Execute'><command>synclient TouchpadOff=0</command></action></keybind>
 
-    <keybind key="W-q"><action name="Execute"><command>xtrlock</command></action></keybind>
-    <keybind key='W-S-q'><action name='Execute'><command>locksleep</command></action></keybind><!-- suspend and lock -->
+    <keybind key="W-Q"><action name="Execute"><command>xtrlock</command></action></keybind>
+    <keybind key='W-Escape'><action name='Execute'><command>locksleep</command></action></keybind><!-- lock and suspend -->
 
     <keybind key='XF86MonBrightnessUp'><action name='Execute'><command>backlight +100</command></action></keybind>
     <keybind key='XF86MonBrightnessDown'><action name='Execute'><command>backlight -100</command></action></keybind>
@@ -81,9 +81,11 @@
     <keybind key='W-1'><action name='MoveResizeTo'><x>0</x></action></keybind>
     <keybind key='W-2'><action name='MoveResizeTo'><x>639</x></action></keybind>
     <keybind key='W-3'><action name='MoveResizeTo'><x>1278</x></action></keybind>
-    <keybind key='W-7'><action name='MoveResizeTo'><y>0</y></action></keybind>
+    <keybind key='W-4'><action name='MoveResizeTo'><x>1918</x></action></keybind><!-- fourth column for iris -->
+    <keybind key='W-9'><action name='MoveResizeTo'><y>0</y></action></keybind>
     <keybind key='W-8'><action name='MoveResizeTo'><y>355</y></action></keybind>
-    <keybind key='W-9'><action name='MoveResizeTo'><y>710</y></action></keybind>
+    <keybind key='W-7'><action name='MoveResizeTo'><y>710</y></action></keybind>
+    <keybind key='W-6'><action name='MoveResizeTo'><y>1070</y></action></keybind><!-- fourth row for iris -->
     <keybind key='W-minus'><action name='MoveResizeTo'><width>642</width></action></keybind>
     <keybind key='W-equal'><action name='MoveResizeTo'><width>1284</width></action></keybind>
 
@@ -92,11 +94,11 @@
     <keybind key="W-w"><action name="Execute"><command>google-chrome</command></action></keybind>
 
     <!-- Keybindings for desktop switching -->
-    <keybind key='W-p'><action name='GoToDesktop'><to>23</to></action></keybind>
-    <keybind key='W-bracketleft'><action name='GoToDesktop'><to>28</to></action></keybind>
-    <keybind key='W-semicolon'><action name='GoToDesktop'><to>45</to></action></keybind>
-    <keybind key='W-period'><action name='GoToDesktop'><to>78</to></action></keybind>
-    <keybind key='W-slash'><action name='GoToDesktop'><to>73</to></action></keybind>
+    <keybind key='W-bracketleft'><action name='GoToDesktop'><to>23</to></action></keybind>
+    <keybind key='W-bracketright'><action name='GoToDesktop'><to>28</to></action></keybind>
+    <keybind key='W-backslash'><action name='GoToDesktop'><to>45</to></action></keybind>
+    <keybind key='W-semicolon'><action name='GoToDesktop'><to>78</to></action></keybind>
+    <keybind key='W-apostrophe'><action name='GoToDesktop'><to>73</to></action></keybind>
 
     <keybind key="W-h"><action name="DesktopLeft"/></keybind>
     <keybind key="W-l"><action name="DesktopRight"/></keybind>
