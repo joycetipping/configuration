@@ -40,8 +40,8 @@ draw_graph_borders no
 
 
 TEXT
-${color1}${font Courier:pixelsize=50}${time %H:%M}${font}
-${font Courier:pixelsize=25}${time %Y.%m.%d}${font}${color}
+${color1}${font Courier:pixelsize=55}${time %H:%M}${font}
+${font Courier:pixelsize=25}${time %d %b %Y}${font}${color}
 
 Desktop ${color ffffff}${desktop}${color}
 Brightness ${color ffffff}${exec cat /sys/class/backlight/intel*/brightness}${color}
