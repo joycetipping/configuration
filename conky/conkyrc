@@ -45,7 +45,7 @@ ${font Courier:pixelsize=25}${time %d %b %Y}${font}${color}
 
 Desktop ${color ffffff}${desktop}${color}
 Brightness ${color ffffff}${exec cat /sys/class/backlight/intel*/brightness}${color}
-Volume ${color ffffff}${execi 1 vol-get 1}%${color}
+Volume ${color ffffff}${execi 1 vol-get 0}%${color}
 Uptime ${uptime_short}
 Free Space ${fs_free /}
 
