@@ -10,7 +10,7 @@ init_session() {
   xmodmap ~/.Xmodmap
   xset r rate 300 25
 
-  gnome-terminal &
+  conky &
   lxsession &
   xcompmgr &
 }
