@@ -7,6 +7,7 @@ init_session() {
   ~/.config/openbox/set-desktop-grid 0 10 10 0
   nitrogen --set-zoom-fill ~/.config/openbox/background.jpg
   xrdb ~/.Xresources
+  xmodmap ~/.Xmodmap
   xset r rate 300 25
 
   gnome-terminal &
