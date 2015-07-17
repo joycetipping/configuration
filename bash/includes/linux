@@ -1,1 +1,5 @@
 # vim: syntax=sh :
+
+# Pip
+# ---
+export PATH="$PATH:$HOME/.local/bin"
