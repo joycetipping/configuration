@@ -56,11 +56,11 @@
     <keybind key='S-XF86MonBrightnessUp'><action name='Execute'><command>backlight +5</command></action></keybind>
     <keybind key='S-XF86MonBrightnessDown'><action name='Execute'><command>backlight -5</command></action></keybind>
 
-    <keybind key='XF86AudioRaiseVolume'><action name='Execute'><command>vol-set 0 +5%</command></action></keybind>
-    <keybind key='XF86AudioLowerVolume'><action name='Execute'><command>vol-set 0 -5%</command></action></keybind>
-    <keybind key='S-XF86AudioRaiseVolume'><action name='Execute'><command>vol-set 0 +20%</command></action></keybind>
-    <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-set 0 -20%</command></action></keybind>
-    <keybind key='XF86AudioMute'><action name='Execute'><command>vol-mute 0</command></action></keybind>
+    <keybind key='XF86AudioRaiseVolume'><action name='Execute'><command>vol-set 1 +5%</command></action></keybind>
+    <keybind key='XF86AudioLowerVolume'><action name='Execute'><command>vol-set 1 -5%</command></action></keybind>
+    <keybind key='S-XF86AudioRaiseVolume'><action name='Execute'><command>vol-set 1 +20%</command></action></keybind>
+    <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-set 1 -20%</command></action></keybind>
+    <keybind key='XF86AudioMute'><action name='Execute'><command>vol-mute 1</command></action></keybind>
 
     <!-- Keybindings for menus and dialogs-->
     <keybind key="A-F2"><action name="Execute"><command>gmrun</command></action></keybind>
