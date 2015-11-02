@@ -28,7 +28,7 @@ function setup_left_and_right {
 
   export PS1_LEFT="$rose\h$magenta\W $text"
 
-  right_prompt="${cyan}($(rvm-prompt v g))${green}$(__git_ps1 "(%s)")"
-  ((exit_code != 0)) && right_prompt="${magenta}(e${exit_code})${text}${right_prompt}"
-  export PS1_RIGHT="$right_prompt"
+  #right_prompt="${cyan}($(rvm-prompt v g))${green}$(__git_ps1 "(%s)")"
+  #((exit_code != 0)) && right_prompt="${magenta}(e${exit_code})${text}${right_prompt}"
+  #export PS1_RIGHT="$right_prompt"
 }
