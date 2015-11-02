@@ -55,6 +55,8 @@
     <keybind key='XF86MonBrightnessDown'><action name='Execute'><command>backlight -100</command></action></keybind>
     <keybind key='S-XF86MonBrightnessUp'><action name='Execute'><command>backlight +5</command></action></keybind>
     <keybind key='S-XF86MonBrightnessDown'><action name='Execute'><command>backlight -5</command></action></keybind>
+    <keybind key='W-b'><action name='Execute'><command>backlight 852</command></action></keybind>
+    <keybind key='W-S-b'><action name='Execute'><command>backlight 2</command></action></keybind>
 
     <keybind key='XF86AudioRaiseVolume'><action name='Execute'><command>vol-set 1 +5%</command></action></keybind>
     <keybind key='XF86AudioLowerVolume'><action name='Execute'><command>vol-set 1 -5%</command></action></keybind>
