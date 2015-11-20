@@ -1,7 +1,5 @@
 "Basic
 
-colorscheme molokai
-
 "Keyboard and screen
 set mouse=a
 set nowrap
@@ -20,7 +18,7 @@ set hlsearch
 set ignorecase
 set incsearch
 "Folds
-set foldcolumn=2
+set foldcolumn=0
 set foldmethod=marker
 "Buffers
 set hidden
