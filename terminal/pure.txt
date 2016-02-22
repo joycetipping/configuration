@@ -1,0 +1,10 @@
+               Normal                   Bright
+               -------------------      -------------------
+1   Black      000000    0   0   0      same
+2   Red        ff0000  255   0   0      same
+3   Green      00ff00    0 255   0      same
+4   Yellow     ffff00  255 255   0      same
+5   Blue       0000ff    0   0 255      same
+6   Magenta    ff00ff  255   0 255      same
+7   Cyan       00ffff    0 255 255      same
+8   White      000000  255 255 255      same
