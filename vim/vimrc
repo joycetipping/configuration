@@ -44,7 +44,7 @@ nnoremap <F7>  :call ToggleTerminalCopyPaste()<CR>
 com Dws :%s/\s\+$// "Delete whitespace
 com Wpm call WordProcessorMode()
 
-filetype plugin on
+filetype plugin indent on
 autocmd BufRead,BufNewFile Gemfile set filetype=ruby
 autocmd BufRead,BufNewFile *.markdown,*.md set filetype=markdown
 autocmd BufRead,BufNewFile *.clojure,*.clj,*.edn set filetype=clojure
@@ -116,7 +116,7 @@ map <F4> :Gblame<CR>
 map <F2> :NERDTreeToggle<CR>
 
 "Pathogen
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 "Tlist
 map <F3> :TlistToggle<CR>
