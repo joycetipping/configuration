@@ -127,3 +127,7 @@ map <F3> :TlistToggle<CR>
 "gVim on Windows
 syntax on
 set bs=2
+
+"Colorscheme
+"Must come after the Pathogen call
+colorscheme metacosm
