@@ -12,6 +12,7 @@ ln -sf $conf/bash/bashrc           $HOME/.bashrc
 ln -sf $conf/bash/bash_profile     $HOME/.bash_profile
 
 ln -sf $conf/git/gitconfig         $HOME/.gitconfig
+ln -sf $conf/ssh-config            $HOME/.ssh/config
 
 if [[ "$(uname)" == 'Linux'  ]]; then
   ln -sf $conf/bash/xinitrc        $HOME/.xinitrc

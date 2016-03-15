@@ -1,0 +1,8 @@
+Host r1
+  HostName rorschach
+  Port 2022
+  User spencertipping
+
+Host r2
+  HostName rorschach
+  Port 2122
