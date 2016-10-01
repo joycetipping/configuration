@@ -37,8 +37,8 @@ nnoremap ' `
 nnoremap ` '
 nnoremap <S-h> gT
 nnoremap <S-l> gt
-nnoremap <C-h> :call TabSlideLeft()<CR>
-nnoremap <C-l> :call TabSlideRight()<CR>
+nnoremap <C-h> :tabm -1<CR>
+nnoremap <C-l> :tabm +1<CR>
 nnoremap <F7>  :call ToggleTerminalCopyPaste()<CR>
 
 com Dws :%s/\s\+$// "Delete whitespace
@@ -70,26 +70,6 @@ function! ToggleTerminalCopyPaste()
     echo "Terminal copy & paste disabled"
   endif
 endfunction
-
-function! TabSlideLeft()
-  " Get current tab number (one-based)
-  let current = tabpagenr()
-
-  " Move tab only if it's not the first
-  " We're subtracting 2 because the "tabm" command is zero-based.
-  if current > 1
-    exec "tabm" . (current - 2)
-  endif
-endfunction
-
-function! TabSlideRight()
-  " Get current tab number (one-based)
-  let current = tabpagenr()
-
-  " Move tab. Since tabm is zero-based, we do not need to add 1.
-  exec "tabm " . current
-endfunction
-
 
 function! WordProcessorMode()
   setlocal formatoptions=1
