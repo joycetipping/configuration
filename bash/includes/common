@@ -1,5 +1,9 @@
 # vim: syntax=sh :
 
+# BC
+# --
+export BC_ENV_ARGS="$home/.bcrc"
+
 # Exiftool
 # --------
 dates () {
