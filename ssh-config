@@ -1,8 +1,36 @@
-Host r1
+Host sr1
   HostName rorschach
   Port 2022
   User spencertipping
 
-Host r2
+Host jr1
   HostName rorschach
   Port 2122
+
+Host jr2
+  HostName rorschach
+  Port 2123
+
+Host jr3
+  HostName rorschach
+  Port 2124
+
+Host jr4
+  HostName rorschach
+  Port 2125
+
+Host jr5
+  HostName rorschach
+  Port 2126
+
+Host jr6
+  HostName rorschach
+  Port 2127
+
+Host jr7
+  HostName rorschach
+  Port 2128
+
+Host jr8
+  HostName rorschach
+  Port 2129
