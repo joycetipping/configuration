@@ -24,7 +24,7 @@ source "$conf/git/git-completion.bash"
 
 # R
 # -
-export R_LIBS="$HOME/.R:$R_LIBS"
+export R_LIBS="$home/.R:$R_LIBS"
 
 
 # Ruby
@@ -37,8 +37,8 @@ function serve {
 
 # RVM
 # ---
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="$PATH:$home/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$home/.rvm/scripts/rvm" ]] && source "$home/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 cd .
 
 

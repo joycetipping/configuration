@@ -7,4 +7,4 @@ source "$home/projects/github/cd/cd"
 
 # Pip
 # ---
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$home/.local/bin"
