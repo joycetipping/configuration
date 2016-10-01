@@ -47,6 +47,11 @@ cd .
 ssh-add > /dev/null 2>&1
 
 
+# sshuttle
+# -------
+source ~/projects/github/resources/bash-aliases
+
+
 # Miscellaneous
 # -------------
 count () {
