@@ -13,7 +13,14 @@ source "$home/.bash/init"
 # Adjust the path
 if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
 
+# Source aliases and program-specific functions
+if [[ -f "$conf/bash/includes/aliases"   ]];                                 then source "$conf/bash/includes/aliases"; fi
+if [[ -f "$conf/bash/includes/common"    ]];                                 then source "$conf/bash/includes/common";  fi
+if [[ -f "$conf/bash/includes/linux"     ]] && [[ "$(uname)" == 'Linux'  ]]; then source "$conf/bash/includes/linux";   fi
+if [[ -f "$conf/bash/includes/mac"       ]] && [[ "$(uname)" == 'Darwin' ]]; then source "$conf/bash/includes/mac";     fi
+
 # Terminal settings
+eval $(dircolors $conf/bash/includes/dir_colors)  # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 export LC_CTYPE='en_US.utf-8'
@@ -25,13 +32,3 @@ HISTCONTROL=ignoredups:ignorespace    # Don't put duplicate lines in the history
 shopt -s histappend                   # Append to the history file, don't overwrite it
 HISTSIZE=1000
 HISTFILESIZE=2000
-
-# Source aliases and program-specific functions
-if [[ -f "$conf/bash/includes/aliases"   ]];                                 then source "$conf/bash/includes/aliases"; fi
-if [[ -f "$conf/bash/includes/common"    ]];                                 then source "$conf/bash/includes/common";  fi
-if [[ -f "$conf/bash/includes/linux"     ]] && [[ "$(uname)" == 'Linux'  ]]; then source "$conf/bash/includes/linux";   fi
-if [[ -f "$conf/bash/includes/mac"       ]] && [[ "$(uname)" == 'Darwin' ]]; then source "$conf/bash/includes/mac";     fi
-
-# Terminal settings
-# This needs to go after the Mac includes because the gnu coreutils need to be sourced.
-eval $(dircolors $conf/bash/includes/dir_colors)  # display broken symlinks
