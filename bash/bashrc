@@ -7,8 +7,8 @@
 export home="$HOME"
 export conf="$home/projects/configuration"
 
-# Source Spencer's bashrc-tmux script
-source "$home/projects/github/bashrc-tmux/bashrc-tmux"
+# Source Spencer's dotbash
+source "$home/.bash/init"
 
 # Adjust the path
 if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
@@ -25,9 +25,6 @@ HISTCONTROL=ignoredups:ignorespace    # Don't put duplicate lines in the history
 shopt -s histappend                   # Append to the history file, don't overwrite it
 HISTSIZE=1000
 HISTFILESIZE=2000
-
-# Bash prompt
-source "$conf/bash/includes/prompt"
 
 # Source aliases and program-specific functions
 if [[ -f "$conf/bash/includes/aliases"   ]];                                 then source "$conf/bash/includes/aliases"; fi

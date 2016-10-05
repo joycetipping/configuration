@@ -1,10 +1,5 @@
 # vim: syntax=sh :
 
-# CD
-# --
-CD_EXTENSIONS=(traverse history ssh missing-mkdir archive encfs dev loop)
-source "$home/projects/github/cd/cd"
-
 # Perl
 # ----
 PATH="/home/joyce/perl5/bin${PATH:+:${PATH}}"; export PATH;
