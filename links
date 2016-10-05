@@ -27,4 +27,7 @@ if [[ "$(uname)" == 'Darwin'  ]]; then
 fi
 
 rm $home/.vim/vim
-rm $home/.config/openbox/openbox
+
+if [[ "$(uname)" == 'Linux'  ]]; then
+  rm $home/.config/openbox/openbox
+fi
