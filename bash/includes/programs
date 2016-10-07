@@ -20,7 +20,7 @@ dates () {
 
 # Git
 # ---
-source "$conf/git/git-completion.bash"
+source "$conf/git/git-completion.sh"
 
 
 # R
@@ -50,7 +50,7 @@ ssh-add > /dev/null 2>&1
 
 # sshuttle
 # -------
-source "$home/storage/gogs/resources/bash-aliases"
+alias rvpn='sshuttle -r rorschach 10.35.0.0/16'
 
 
 # Miscellaneous

@@ -11,8 +11,8 @@ export conf="$home/projects/configuration"
 if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
 
 # Source aliases and program-specific functions
-if [[ -f "$conf/bash/includes/aliases"   ]];                                 then source "$conf/bash/includes/aliases"; fi
-if [[ -f "$conf/bash/includes/common"    ]];                                 then source "$conf/bash/includes/common";  fi
+if [[ -f "$conf/bash/includes/aliases" ]]; then source "$conf/bash/includes/aliases"; fi
+if [[ -f "$conf/bash/includes/common"  ]]; then source "$conf/bash/includes/common";  fi
 
 # Terminal settings
 eval $(dircolors $conf/bash/includes/dir_colors)  # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
@@ -29,4 +29,4 @@ HISTSIZE=
 HISTFILESIZE=
 
 # Source Spencer's dotbash
-source "$conf/bash/dotbash/init"
+source "$HOME/.bash/init"
