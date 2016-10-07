@@ -29,4 +29,4 @@ HISTSIZE=
 HISTFILESIZE=
 
 # Source Spencer's dotbash
-source "$home/.bash/init"
+source "$conf/bash/dotbash/init"

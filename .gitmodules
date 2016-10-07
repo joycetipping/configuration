@@ -10,3 +10,6 @@
 [submodule "vim/vim/bundle/polyglot"]
 	path = vim/vim/bundle/polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "bash/includes/dotbash"]
+	path = bash/dotbash
+	url = git@github.com:spencertipping/dotbash.git
