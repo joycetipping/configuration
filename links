@@ -3,31 +3,25 @@
 export home="$HOME"
 export conf="$home/projects/configuration"
 
-ln -sf $conf/emacs                 $home/.emacs
-ln -sf $conf/tmux.conf             $home/.tmux.conf
-ln -sf $conf/vim/vimrc             $home/.vimrc
-ln -sf $conf/vim/vim               $home/.vim
+ln -sf $conf/emacs                 $HOME/.emacs
+ln -sf $conf/tmux.conf             $HOME/.tmux.conf
+ln -sf $conf/vim/vimrc             $HOME/.vimrc
+ln -sf $conf/vim/vim               $HOME/.vim
 
-ln -sf $conf/bash/bashrc           $home/.bashrc
-ln -sf $conf/bash/bash_profile     $home/.bash_profile
+ln -sf $conf/bash/bashrc           $HOME/.bashrc
+ln -sf $conf/bash/bash_profile     $HOME/.bash_profile
 
-ln -sf $conf/bcrc                  $home/.bcrc
-ln -sf $conf/git/gitconfig         $home/.gitconfig
-ln -sf $conf/ssh-config            $home/.ssh/config
+ln -sf $conf/bcrc                  $HOME/.bcrc
+ln -sf $conf/git/gitconfig         $HOME/.gitconfig
+ln -sf $conf/ssh-config            $HOME/.ssh/config
 
-if [[ "$(uname)" == 'Linux'  ]]; then
-  ln -sf $conf/bash/xinitrc        $home/.xinitrc
-  ln -sf $conf/conky/conkyrc       $home/.conkyrc
-  ln -sf $conf/openbox             $home/.config/openbox
-  ln -sf $conf/x11/Xmodmap-linux   $home/.Xmodmap
-fi
+rm $HOME/.vim/vim
 
-if [[ "$(uname)" == 'Darwin'  ]]; then
-  ln -sf $conf/x11/Xmodmap-mac     $home/.Xmodmap
-fi
+if [[ "$@" == 'all'  ]]; then
+  ln -sf $conf/bash/xinitrc        $HOME/.xinitrc
+  ln -sf $conf/conkyrc             $HOME/.conkyrc
+  ln -sf $conf/openbox             $HOME/.config/openbox
+  ln -sf $conf/Xmodmap             $HOME/.Xmodmap
 
-rm $home/.vim/vim
-
-if [[ "$(uname)" == 'Linux'  ]]; then
-  rm $home/.config/openbox/openbox
+  rm $HOME/.config/openbox/openbox
 fi

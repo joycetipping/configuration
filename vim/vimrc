@@ -1,6 +1,7 @@
 "Basic
+set encoding=utf-8
 
-"Keyboard and screen
+"Keyboard and screen*
 set mouse=a
 set nowrap
 set number
@@ -31,23 +32,15 @@ set modelines=5
 
 let mapleader = " "
 
-nnoremap s o<ESC>
-nnoremap S O<ESC>
-nnoremap ' `
-nnoremap ` '
-nnoremap <S-h> gT
-nnoremap <S-l> gt
-nnoremap <C-h> :tabm -1<CR>
-nnoremap <C-l> :tabm +1<CR>
-nnoremap <F7>  :call ToggleTerminalCopyPaste()<CR>
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+nnoremap <leader>h :tabm -1<CR>
+nnoremap <leader>l :tabm +1<CR>
+nnoremap <F7> :call ToggleTerminalCopyPaste()<CR>
 
-com Dws :%s/\s\+$// "Delete whitespace
-com Wpm call WordProcessorMode()
+command Dws :%s/\s\+$// "Delete whitespace
 
 filetype plugin indent on
-autocmd BufRead,BufNewFile Gemfile set filetype=ruby
-autocmd BufRead,BufNewFile *.markdown,*.md set filetype=markdown
-autocmd BufRead,BufNewFile *.clojure,*.clj,*.edn set filetype=clojure
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 foldcolumn=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,42 +64,15 @@ function! ToggleTerminalCopyPaste()
   endif
 endfunction
 
-function! WordProcessorMode()
-  setlocal formatoptions=1
-  setlocal formatprg=par
-  setlocal linebreak
-  setlocal nolist "Need to disable 'list' to enable 'linebreak'
-  setlocal wrap
-  map j gj
-  map k gk
-endfunction
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugins
 
-"Ctags
-set tags=./tags;/                                            "Check for tags file
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>  "Open in new tab
-"map <C-\> :vsp<CR>:exec("tag ".expand("<cword>"))<CR>        "Open in vertical split
-
-"Fugitive
-map <F4> :Gblame<CR>
-
 "Nerdtree
-map <F2> :NERDTreeToggle<CR>
+map <F8> :NERDTreeToggle<CR>
 
 "Pathogen
 execute pathogen#infect()
 
-"Tlist
-map <F3> :TlistToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Special setups and operating systems
-
-"gVim on Windows
-syntax on
-set bs=2
 
 "Colorscheme
 "Must come after the Pathogen call

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export home="$HOME/home"
+export conf="$home/projects/configuration"
+
+ln -sf $conf/mac/bash_profile $HOME/.bash_profile
+ln -sf $conf/mac/Xmodmap      $HOME/.Xmodmap
