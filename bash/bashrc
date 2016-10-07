@@ -18,7 +18,6 @@ if [[ -f "$conf/bash/includes/common"  ]]; then source "$conf/bash/includes/comm
 eval $(dircolors $conf/bash/includes/dir_colors)  # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
-export LC_CTYPE='en_US.utf-8'
 export DISPLAY=:0.0
 export TERM='xterm-256color'
 

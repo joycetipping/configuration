@@ -1,4 +1,4 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-alias system="docker exec -it system su -l joyce"
+alias sys="docker exec -it system su -l joyce"
