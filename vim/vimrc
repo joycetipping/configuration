@@ -32,6 +32,7 @@ set modelines=5
 
 let mapleader = " "
 
+nnoremap <CR> o<ESC>
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 nnoremap <leader>h :tabm -1<CR>
