@@ -1,4 +1,12 @@
+# ~/.bash_profile
+
+export home="$HOME/home"
+export conf="$home/projects/configuration"
+
+# Terminal colors
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# Aliases
 alias sys="docker exec -it system su -l joyce"
+alias dockrun="$conf/mac/docker/run"
