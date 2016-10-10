@@ -17,6 +17,7 @@ ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 ln -sf $conf/ssh-config            $HOME/.ssh/config
 
 rm $HOME/.vim/vim
+rm $HOME/.bash/dotbash
 
 if [[ "$@" == 'all'  ]]; then
   ln -sf $conf/bash/xinitrc        $HOME/.xinitrc

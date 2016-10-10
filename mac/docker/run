@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# system
-docker run -di -v /:/mac -h system --name system system

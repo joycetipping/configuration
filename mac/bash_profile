@@ -8,5 +8,6 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Aliases
-alias sys="docker exec -it system su -l joyce"
+alias conf="cd $conf"
 alias dockrun="$conf/mac/docker/run"
+alias sys="docker exec -it system su -l joyce"
