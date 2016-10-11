@@ -12,13 +12,12 @@ if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's privat
 
 # Source aliases and program-specific functions
 if [[ -f "$conf/bash/includes/aliases" ]]; then source "$conf/bash/includes/aliases"; fi
-if [[ -f "$conf/bash/includes/common"  ]]; then source "$conf/bash/includes/common";  fi
+if [[ -f "$conf/bash/includes/programs"  ]]; then source "$conf/bash/includes/programs";  fi
 
 # Terminal settings
 eval $(dircolors $conf/bash/includes/dir_colors)  # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
-export DISPLAY=:0.0
 export TERM='xterm-256color'
 
 # Bash history
