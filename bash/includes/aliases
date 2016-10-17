@@ -1,14 +1,11 @@
 # vim: syntax=sh :
 
-# Bash
+# Navigation
 alias l='ls -CF'
 alias la="ls -a"
 alias ll="ls -ilh"
 alias ls="ls --color=auto"
-alias lst="ls -tr"
-alias now="date +%Y.%m%d.%H%M"
 alias s="ls"
-alias sus='sudo pm-suspend'
 alias u="cd ../"
 alias u2="cd ../../"
 alias u3="cd ../../../"
@@ -17,9 +14,6 @@ alias u5="cd ../../../../../"
 alias u6="cd ../../../../../../"
 alias u7="cd ../../../../../../../"
 alias u8="cd ../../../../../../../../"
-
-# Applications
-alias bc="echo Starting bc -l;echo;bc -l"
 
 # Places
 alias aliases="vim $conf/bash/includes/aliases"
@@ -34,3 +28,8 @@ alias notes="cd $home/projects/notes/"
 alias projects="cd $home/projects/"
 alias programs="cd $home/projects/programs/"
 alias website="cd $home/projects/joycetipping.com/"
+
+# Other
+alias bc="echo Starting bc -l;echo;bc -l"
+alias now="date +%Y.%m%d.%H%M"
+alias sus='sudo pm-suspend'

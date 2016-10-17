@@ -1,17 +1,33 @@
-# ~/.bash_profile
+# vim: syntax=sh :
 
 export home="$HOME/home"
 export conf="$home/projects/configuration"
 
-# Terminal colors
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-
 # Adjust the path
 if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # Source gnu utils
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # Source gnu utils manpages
 
 # Aliases
-alias conf="cd $conf"
-alias dockrun="$conf/mac/docker/run"
+## Navigation
+alias l='ls -CF'
+alias la="ls -a"
+alias ll="ls -ilh"
+alias ls="ls --color=auto"
+alias s="ls"
+alias u="cd ../"
+alias u2="cd ../../"
+alias u3="cd ../../../"
+alias u4="cd ../../../../"
+alias u5="cd ../../../../../"
+alias u6="cd ../../../../../../"
+alias u7="cd ../../../../../../../"
+alias u8="cd ../../../../../../../../"
+## Docker
 alias sys="docker exec -it system su -l joyce"
-alias u="cd .."
+alias dockrun="$conf/mac/docker/run"
+## Places
+alias conf="cd $conf"
+## Other
+alias bc="echo Starting bc -l;echo;bc -l"
+alias rvpn='sshuttle -r rorschach 10.35.0.0/16'

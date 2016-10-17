@@ -48,11 +48,6 @@ cd .
 ssh-add > /dev/null 2>&1
 
 
-# sshuttle
-# -------
-alias rvpn='sshuttle -r rorschach 10.35.0.0/16'
-
-
 # Miscellaneous
 # -------------
 count () {
