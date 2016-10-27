@@ -7,7 +7,7 @@ RUN apt-get install -y aptitude bc git rsync ssh sudo vim
 ## Programming-related
 RUN apt-get install -y ruby python3.5 python3-numpy perlconsole libcrypt-cbc-perl libcrypt-blowfish-perl octave r-base
 ## Other
-RUN apt-get install samba
+RUN apt-get install -y samba
 
 # Create user account
 RUN useradd -ms /bin/bash joyce -G adm,sudo && echo "%sudo ALL=NOPASSWD: ALL" >> /etc/sudoers
