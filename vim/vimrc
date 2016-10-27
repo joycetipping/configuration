@@ -14,6 +14,7 @@ set expandtab
 set nojoinspaces
 set shiftwidth=2
 set tabstop=2
+set textwidth=80
 "Search options
 set hlsearch
 set ignorecase
@@ -25,7 +26,7 @@ set foldmethod=marker
 set hidden
 "Highlight trailing whitespace
 set list
-set listchars=tab:\ \ ,trail:·
+set listchars=tab:▸·,trail:·
 "Modeline
 set modeline
 set modelines=5
@@ -36,13 +37,14 @@ nnoremap <CR> o<ESC>
 nnoremap <leader><CR> O<ESC>
 nnoremap <C-h> gT
 nnoremap <C-l> gt
-nnoremap <leader>h :tabm -1<CR>
-nnoremap <leader>l :tabm +1<CR>
+nnoremap <leader>h :tabmove -1<CR>
+nnoremap <leader>l :tabmove +1<CR>
 nnoremap <F7> :call ToggleTerminalCopyPaste()<CR>
 
 command Dws :%s/\s\+$// "Delete whitespace
 
 filetype plugin indent on
+autocmd BufRead,BufNewFile *.tsv setlocal noexpandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 foldcolumn=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,8 +76,3 @@ map <F8> :NERDTreeToggle<CR>
 
 "Pathogen
 execute pathogen#infect()
-
-
-"Colorscheme
-"Must come after the Pathogen call
-colorscheme metacosm
