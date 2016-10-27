@@ -93,6 +93,7 @@
 
     <!-- Keybindings for applications -->
     <keybind key="W-t"><action name="Execute"><command>gnome-terminal</command></action></keybind>
+    <keybind key="S-W-t"><action name="Execute"><command>gnome-terminal --tab-with-profile=dark</command></action></keybind>
     <keybind key="W-w"><action name="Execute"><command>google-chrome</command></action></keybind>
 
     <!-- Keybindings for desktop switching -->
