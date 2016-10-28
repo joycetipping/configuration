@@ -1,0 +1,17 @@
+Copied from the Molokai color scheme:
+https://github.com/mbadolato/iTerm2-Color-Schemes
+
+Background: #171717, (23, 23, 23)
+Foreground: #c7c7c7, (199, 199, 199)
+Bold: white, #ffffff, (255, 255, 255)
+
+               Normal                   Bright
+               -------------------      -------------------
+1   Black      171717   23  23  23      686868  104 104 104
+2   Red        fe4386  254  67 134      fa80ac  250 128 172
+3   Green      a6e32d  166 227  45      bde371  189 227 113
+4   Yellow     e6da73  230 218 115      fff27f  255 242 127
+5   Blue       0094d9    0 148 217      00beff    0 190 255
+6   Magenta    9b37ff  155  55 255      be9eff  190 158 255
+7   Cyan       50b7d9   80 183 217      5ed7ff   94 215 255
+8   White      c7c7c7  199 199 199      ffffff  255 255 255
