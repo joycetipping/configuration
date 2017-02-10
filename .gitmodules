@@ -10,3 +10,6 @@
 [submodule "vim/vim/bundle/polyglot"]
 	path = vim/vim/bundle/polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "bash/includes/bash-prompt"]
+	path = bash/includes/bash-prompt
+	url = https://github.com/spencertipping/bash-prompt.git
