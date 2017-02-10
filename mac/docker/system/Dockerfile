@@ -3,7 +3,7 @@ RUN apt-get update
 
 # Packages
 ## Essentials
-RUN apt-get install -y aptitude bc git rsync ssh sudo vim
+RUN apt-get install -y aptitude bc curl git rsync ssh sudo tmux vim wget
 ## Programming-related
 RUN apt-get install -y ruby python3.5 python3-numpy perlconsole libcrypt-cbc-perl libcrypt-blowfish-perl octave r-base
 ## Other
@@ -17,5 +17,9 @@ RUN rm -r /home/joyce
 VOLUME /mac
 RUN ln -s /mac/Users/joyce/home /home/joyce
 RUN ln -s /mac/Volumes /Volumes
+
+# Install youtube-dl manually
+RUN sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+RUN chmod a+rx /usr/local/bin/youtube-dl
 
 CMD /bin/bash
