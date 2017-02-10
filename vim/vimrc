@@ -45,6 +45,8 @@ command Dws :%s/\s\+$// "Delete whitespace
 
 filetype plugin indent on
 autocmd BufRead,BufNewFile *.tsv setlocal noexpandtab
+autocmd BufRead,BufNewFile */journal/* set textwidth=100
+autocmd BufRead,BufNewFile passwords.* set textwidth=0
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 foldcolumn=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
