@@ -12,7 +12,8 @@ if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's privat
 
 # Source aliases and program-specific functions
 if [[ -f "$conf/bash/includes/aliases" ]]; then source "$conf/bash/includes/aliases"; fi
-if [[ -f "$conf/bash/includes/programs"  ]]; then source "$conf/bash/includes/programs";  fi
+if [[ -f "$conf/bash/includes/programs"  ]]; then source "$conf/bash/includes/programs"; fi
+if [[ -f "$conf/bash/includes/bash-prompt/prompt" ]]; then source "$conf/bash/includes/bash-prompt/prompt"; fi
 
 # Terminal settings
 eval $(dircolors $conf/bash/includes/dir_colors)  # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
@@ -25,6 +26,3 @@ HISTCONTROL=ignoredups:ignorespace    # Don't put duplicate lines in the history
 shopt -s histappend                   # Append to the history file, don't overwrite it
 HISTSIZE=
 HISTFILESIZE=
-
-# Source Spencer's dotbash
-source "$HOME/.bash/init"
