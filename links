@@ -9,14 +9,12 @@ ln -sf $conf/vim/vim               $HOME/.vim
 
 ln -sf $conf/bash/bashrc           $HOME/.bashrc
 ln -sf $conf/bash/bash_profile     $HOME/.bash_profile
-ln -sf $conf/bash/dotbash          $HOME/.bash
 
 ln -sf $conf/bcrc                  $HOME/.bcrc
 ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 ln -sf $conf/ssh-config            $HOME/.ssh/config
 
 rm $HOME/.vim/vim
-rm $HOME/.bash/dotbash
 
 if [[ "$@" == 'all'  ]]; then
   ln -sf $conf/bash/xinitrc        $HOME/.xinitrc
