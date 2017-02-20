@@ -4,7 +4,6 @@ export home="$HOME"
 export conf="$home/projects/configuration"
 
 ln -sf $conf/emacs                 $HOME/.emacs
-ln -sf $conf/tmux.conf             $HOME/.tmux.conf
 ln -sf $conf/vim/vimrc             $HOME/.vimrc
 ln -sf $conf/vim/vim               $HOME/.vim
 
