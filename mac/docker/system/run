@@ -3,9 +3,11 @@
 docker run --detach \
            --interactive \
            --volume /:/mac \
+	   --publish 4000:4000 \
+	   --publish 8090:8090 \
            --add-host cherry:192.168.0.39 \
            --add-host rorschach:192.168.0.72 \
-           --add-host adam:192.168.0.85 \
+           --add-host adam:192.168.0.94 \
            --add-host xenorophidae:192.168.0.133 \
            --add-host reykjavik:10.35.0.3 \
            --env DISPLAY=192.168.0.21:0 \
