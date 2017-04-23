@@ -32,5 +32,6 @@ alias website="cd $home/projects/joycetipping.com/"
 
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
+alias grep="grep --color"
 alias now="date +%Y.%m%d.%H%M"
 alias sus='sudo pm-suspend'
