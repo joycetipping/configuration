@@ -1,1 +1,4 @@
 tax = 1.071875
+
+inv = 213
+define cal_avg (low, high) { return (low*5 + high*2)/7 + inv; }
