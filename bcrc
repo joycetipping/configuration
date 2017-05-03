@@ -1,4 +1,5 @@
 tax = 1.071875
 
 inv = 213
-define cal_avg (low, high) { return (low*5 + high*2)/7 + inv; }
+define avg2 (low, high) { return (low*5 + high*2)/7 + inv; }
+define avg3 (low, high) { return (low*4 + high*3)/7 + inv; }
