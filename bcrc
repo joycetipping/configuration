@@ -1,6 +1,11 @@
 tax = 1.071875
 
 inv = 213
-define avg2 (low, high) { return (low*5 + high*2)/7 + inv; }
-define avg3 (low, high) { return (low*4 + high*3)/7 + inv; }
-define avg4 (low, high) { return (low*3 + high*4)/7 + inv; }
+define x0 (low, high) { return low + inv; }
+define x1 (low, high) { return (low*6 + high*1)/7 + inv; }
+define x2 (low, high) { return (low*5 + high*2)/7 + inv; }
+define x3 (low, high) { return (low*4 + high*3)/7 + inv; }
+define x4 (low, high) { return (low*3 + high*4)/7 + inv; }
+define x5 (low, high) { return (low*2 + high*5)/7 + inv; }
+define x6 (low, high) { return (low*1 + high*6)/7 + inv; }
+define x7 (low, high) { return high + inv; }
