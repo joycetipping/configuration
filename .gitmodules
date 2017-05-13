@@ -13,3 +13,9 @@
 [submodule "bash/includes/bash-prompt"]
 	path = bash/includes/bash-prompt
 	url = https://github.com/spencertipping/bash-prompt.git
+[submodule "vim/vim/bundle/surround"]
+	path = vim/vim/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim/bundle/repeat"]
+	path = vim/vim/bundle/repeat
+	url = https://github.com/tpope/vim-repeat.git
