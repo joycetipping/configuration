@@ -1,17 +1,21 @@
 tax = 1.071875
 
-# Calorie average calculators: Takes a low and a high calorie number and gives
-# you a weekly average. `inv` is my invariant calorie intake and doesn't change
-# much.
-inv = 213
-define x0 (low, high) { return low + inv; }
-define x1 (low, high) { return (low*6 + high*1)/7 + inv; }
-define x2 (low, high) { return (low*5 + high*2)/7 + inv; }
-define x3 (low, high) { return (low*4 + high*3)/7 + inv; }
-define x4 (low, high) { return (low*3 + high*4)/7 + inv; }
-define x5 (low, high) { return (low*2 + high*5)/7 + inv; }
-define x6 (low, high) { return (low*1 + high*6)/7 + inv; }
-define x7 (low, high) { return high + inv; }
+# Calorie average calculators: Takes a base calorie number and gives you a
+# weekly average, given variable 'exr' = exercise calories.
+
+exr = 200
+define x0 (base) { return base; }
+define x1 (base) { return base + 1*exr/7; }
+define x2 (base) { return base + 2*exr/7; }
+define x3 (base) { return base + 3*exr/7; }
+define x4 (base) { return base + 4*exr/7; }
+define x5 (base) { return base + 5*exr/7; }
+define x6 (base) { return base + 6*exr/7; }
+define x7 (base) { return base + exr; }
+define xeod (base) { return base + exr/2; } # for every other day exercise
 
 # Calculate total calories from macro numbers.
 define m(protein, carb, fat) { return protein*4 + carb*4 + fat*9; }
+
+# Calculate TDEE from average calorie intake and weight lost:
+define tdee (avg_cal, lbs_lost) { return (avg_cal*7 + lbs_lost*3500)/7; }
