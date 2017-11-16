@@ -74,9 +74,6 @@ alias projects="cd $home/projects/"
 alias programs="cd $home/projects/programs/"
 alias website="cd $home/projects/joycetipping.com/"
 
-# Docker
-alias sys="docker exec -it system su -l joyce"
-
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"

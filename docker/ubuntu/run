@@ -3,8 +3,8 @@
 docker run --detach \
            --interactive \
            --volume /:/mac \
-	   --publish 4000:4000 \
-	   --publish 8090:8090 \
+           --publish 4000:4000 \
+           --publish 8090:8090 \
            --add-host cherry:192.168.0.39 \
            --add-host rorschach:192.168.0.72 \
            --add-host adam:192.168.0.98 \
