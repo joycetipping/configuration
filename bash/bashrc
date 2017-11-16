@@ -10,13 +10,7 @@ export conf="$home/projects/configuration"
 # Adjust the path
 if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
 
-# Source aliases and program-specific functions
-if [[ -f "$conf/bash/includes/aliases" ]]; then source "$conf/bash/includes/aliases"; fi
-if [[ -f "$conf/bash/includes/programs"  ]]; then source "$conf/bash/includes/programs"; fi
-if [[ -f "$conf/bash/includes/bash-prompt/prompt" ]]; then source "$conf/bash/includes/bash-prompt/prompt"; fi
-
 # Terminal settings
-eval $(dircolors $conf/bash/includes/dir_colors)  # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 export TERM='xterm-256color'
@@ -26,3 +20,144 @@ HISTCONTROL=ignoredups:ignorespace    # Don't put duplicate lines in the history
 shopt -s histappend                   # Append to the history file, don't overwrite it
 HISTSIZE=
 HISTFILESIZE=
+
+# Source Spencer's bash prompt
+if [[ -f "$conf/bash/bash-prompt/prompt" ]]; then
+  source "$conf/bash/bash-prompt/prompt"
+fi
+
+# Mac specific settings
+if [[ "$(uname)" == 'Darwin' ]]; then
+  # Source gnu utils and their manpages
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+  export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+
+  # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
+  eval $(echo 'ORPHAN 40;1;31' | dircolors)  
+fi
+
+# Linux specific settings
+#if [[ "$(uname)" == 'Linux' ]]; then
+#fi
+
+
+# Aliases {{{
+
+# Navigation
+alias l='ls -CF'
+alias la="ls -a"
+alias ll="ls -ilh"
+alias ls="ls --color=auto"
+alias s="ls"
+alias u="cd ../"
+alias u2="cd ../../"
+alias u3="cd ../../../"
+alias u4="cd ../../../../"
+alias u5="cd ../../../../../"
+alias u6="cd ../../../../../../"
+alias u7="cd ../../../../../../../"
+alias u8="cd ../../../../../../../../"
+
+# Places
+alias adam="cd $home/library/adam/computer"
+alias aliases="vim $conf/bash/includes/aliases"
+alias blog="cd $home/projects/blog/"
+alias conf="cd $conf"
+alias diary="cd $home/projects/life/diary/"
+alias drafts='cd $home/projects/blog/_drafts; vim ./'
+alias dreams="vim $home/projects/life/dreams/$(date '+%Y').txt"
+alias fubar="cd $home/projects/company/"
+alias journal="cd $home/projects/life/journal/"
+alias music="cd $home/lib/music"
+alias notes="cd $home/projects/notes/"
+alias projects="cd $home/projects/"
+alias programs="cd $home/projects/programs/"
+alias website="cd $home/projects/joycetipping.com/"
+
+# Docker
+alias sys="docker exec -it system su -l joyce"
+
+# Other
+alias bc="echo Starting bc -l;echo;bc -l"
+alias grep="grep --color"
+alias now="date +%Y.%m%d.%H%M"
+alias sus='sudo pm-suspend'
+
+# }}}
+
+# Programs {{{
+
+# BC
+# --
+export BC_ENV_ARGS="$home/.bcrc"
+
+
+# Exiftool
+# --------
+dates () {
+  # Print all EXIF date fields
+  for var in "$@";
+  do
+    echo "$var"
+    exiftool "$var" | grep -i 'date'
+    echo
+  done
+}
+
+
+# Git
+# ---
+source "$conf/git/git-completion.sh"
+
+
+# R
+# -
+export R_LIBS="$home/.R:$R_LIBS"
+
+
+# Ruby
+# ----
+function serve {
+  port="${1:-3000}"
+  ruby -run -e httpd . -p $port
+}
+
+
+# RVM
+# ---
+export PATH="$PATH:$home/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$home/.rvm/scripts/rvm" ]] && source "$home/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+cd .
+
+
+# SSH
+# ---
+ssh-add > /dev/null 2>&1
+
+
+# sshuttle
+# --------
+alias rvpn='sshuttle -r rorschach 10.35.0.0/16'
+
+
+# Miscellaneous
+# -------------
+count () {
+  # Count the number of files in the given directories
+  if [[ "$#" == "0" ]]
+  then
+    ls | wc -l
+  else
+    for var in "$@";
+    do
+      ls "$var" | wc -l
+    done
+  fi
+}
+
+csum () {
+  # Sum the number of files in the given directories
+  count "$@" | awk '{s+=$1} END {print s}'
+}
+
+# }}}

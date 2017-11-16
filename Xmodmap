@@ -1,2 +1,5 @@
-! Map PrtSc to Window on Linux.
-keycode 107 = Super_R
+! Make option keys behave like Alt
+! This is to make Inkscape behave properly on XQuartz on the Mac.
+! Don't use this on Linux: It will royally mess up your alt keys. (As of Ubuntu 15.04 running Openbox 3.5.2.)
+keycode 66 = Alt_L
+keycode 69 = Alt_R

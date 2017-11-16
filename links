@@ -9,18 +9,10 @@ ln -sf $conf/vim/vim               $HOME/.vim
 
 ln -sf $conf/bash/bashrc           $HOME/.bashrc
 ln -sf $conf/bash/bash_profile     $HOME/.bash_profile
+ln -sf $conf/Xmodmap               $HOME/.Xmodmap
 
 ln -sf $conf/bcrc                  $HOME/.bcrc
 ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 ln -sf $conf/ssh-config            $HOME/.ssh/config
 
 rm $HOME/.vim/vim
-
-if [[ "$@" == 'all'  ]]; then
-  ln -sf $conf/bash/xinitrc        $HOME/.xinitrc
-  ln -sf $conf/conkyrc             $HOME/.conkyrc
-  ln -sf $conf/openbox             $HOME/.config/openbox
-  ln -sf $conf/Xmodmap             $HOME/.Xmodmap
-
-  rm $HOME/.config/openbox/openbox
-fi

@@ -1,0 +1,2 @@
+! Map PrtSc to Window on Linux.
+keycode 107 = Super_R
