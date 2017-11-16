@@ -23,6 +23,7 @@ alias conf="cd $conf"
 alias diary="cd $home/projects/life/diary/"
 alias drafts='cd $home/projects/blog/_drafts; vim ./'
 alias dreams="vim $home/projects/life/dreams/$(date '+%Y').txt"
+alias fubar="cd $home/projects/company/"
 alias journal="cd $home/projects/life/journal/"
 alias music="cd $home/lib/music"
 alias notes="cd $home/projects/notes/"
