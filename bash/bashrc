@@ -59,7 +59,7 @@ alias u7="cd ../../../../../../../"
 alias u8="cd ../../../../../../../../"
 
 # Places
-alias adam="cd $home/library/adam/computer"
+alias adam="cd $home/lib/adam/computer"
 alias aliases="vim $conf/bash/includes/aliases"
 alias blog="cd $home/projects/blog/"
 alias conf="cd $conf"
