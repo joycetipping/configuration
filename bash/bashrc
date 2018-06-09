@@ -78,6 +78,7 @@ alias website="cd $home/projects/joycetipping.com/"
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
 alias now="date +%Y.%m%d.%H%M"
+alias passwords="vim $home/projects/utilities/passwords/passwords.txt"
 alias sus='sudo pm-suspend'
 
 # }}}
