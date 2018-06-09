@@ -29,8 +29,8 @@ fi
 # Mac specific settings
 if [[ "$(uname)" == 'Darwin' ]]; then
   # Source gnu utils and their manpages
-  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-  export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
   # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
   eval $(echo 'ORPHAN 40;1;31' | dircolors)  
@@ -118,18 +118,6 @@ function serve {
   port="${1:-3000}"
   ruby -run -e httpd . -p $port
 }
-
-
-# RVM
-# ---
-export PATH="$PATH:$home/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$home/.rvm/scripts/rvm" ]] && source "$home/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-cd .
-
-
-# SSH
-# ---
-ssh-add > /dev/null 2>&1
 
 
 # sshuttle
