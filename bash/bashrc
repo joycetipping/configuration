@@ -8,7 +8,7 @@ export home="$HOME"
 export conf="$home/projects/configuration"
 
 # Adjust the path
-if [[ -d "$home/bin" ]]; then PATH="$PATH:$home/bin"; fi # Include user's private bin
+[[ -d "$home/bin" ]] && PATH="$PATH:$home/bin"  # Include user's private bin
 
 # Terminal settings
 export EDITOR="/usr/bin/vim"
@@ -16,8 +16,8 @@ export VISUAL="/usr/bin/vim"
 export TERM='xterm-256color'
 
 # Bash history
-HISTCONTROL=ignoredups:ignorespace    # Don't put duplicate lines in the history.
-shopt -s histappend                   # Append to the history file, don't overwrite it
+HISTCONTROL=ignoredups:ignorespace  # Don't put duplicate lines in the history.
+shopt -s histappend                 # Append to the history file, don't overwrite it
 HISTSIZE=
 HISTFILESIZE=
 
