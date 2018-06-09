@@ -14,5 +14,6 @@ ln -sf $conf/Xmodmap               $HOME/.Xmodmap
 ln -sf $conf/bcrc                  $HOME/.bcrc
 ln -sf $conf/git/gitconfig         $HOME/.gitconfig
 ln -sf $conf/ssh-config            $HOME/.ssh/config
+ln -sf $conf/tmux.conf             $HOME/.tmux.conf
 
 rm $HOME/.vim/vim

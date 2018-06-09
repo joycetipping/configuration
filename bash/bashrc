@@ -22,9 +22,7 @@ HISTSIZE=
 HISTFILESIZE=
 
 # Source Spencer's bash prompt
-if [[ -f "$conf/bash/bash-prompt/prompt" ]]; then
-  source "$conf/bash/bash-prompt/prompt"
-fi
+source "$home/.bash/init"
 
 # Mac specific settings
 if [[ "$(uname)" == 'Darwin' ]]; then
@@ -33,7 +31,7 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
   # Display broken symlinks. Needs to go after the Mac includes because it requires the gnu coreutils.
-  eval $(echo 'ORPHAN 40;1;31' | dircolors)  
+  eval $(echo 'ORPHAN 40;1;31' | dircolors)
 fi
 
 # Linux specific settings
