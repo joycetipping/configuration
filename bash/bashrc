@@ -107,11 +107,6 @@ dates () {
 }
 
 
-# Git
-# ---
-source "$conf/git/git-completion.sh"
-
-
 # R
 # -
 export R_LIBS="$home/.R:$R_LIBS"
