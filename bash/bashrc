@@ -73,6 +73,11 @@ alias projects="cd $home/projects/"
 alias programs="cd $home/projects/programs/"
 alias website="cd $home/projects/joycetipping.com/"
 
+# Home
+alias evo="curl http://192.168.0.34:8180/0"  # turn evaporative off
+alias evf="curl http://192.168.0.34:8180/4"  # turn evaporative to fan
+alias evc="curl http://192.168.0.34:8180/5"  # turn evaporative to cool
+
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
