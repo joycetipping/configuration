@@ -2,16 +2,22 @@
   name  = Joyce Tipping
   email = joyce.tipping@gmail.com
 [alias]
+  ha  = "!git config -l | grep alias | cut -c 7-"  # list aliases
+  br  = branch
   c   = commit
+  ci  = commit -v
   cm  = commit -m
-  cv  = commit -v
-  d   = diff
+  df  = diff
   dc  = diff --cached
   l   = log --oneline
   ls  = log --pretty=format:"%C(green)%h\\ %C(yellow)%ad\\ %Creset%s%Cred%d\\ %Cblue[%cn]" --date=short --graph
-  ll  = log --pretty=format:"%C(green)%h\\ %C(yellow)%ad\\ %Creset%s%Cred%d\\ %Cblue[%cn]" --date=short --numstat
-  lnc = log --pretty=format:"%h\\ %ad\\ %s%d\\ [%cn]" --date=short --graph
+  ll  = log --pretty=format:"%C(green)%h\\ %C(yellow)%ad\\ %Creset%s%Cred%d\\ %Cblue[%cn]" --date=short --name-status
+  lll = log --pretty=format:"%C(green)%h\\ %C(yellow)%ad\\ %Creset%s%Cred%d\\ %Cblue[%cn]" --date=short --numstat --summary
+  lnc = log --pretty=format:"%h\\ %ad\\ %s%d\\ [%cn]" --date=short --graph  # Same as git "ls" but without color.
+  lp  = log -p
+  s   = status -s
   st  = status
+  sv  = status -v -v  # Show all staged and unstaged changes.
 [color]
   diff   = auto
   status = auto
