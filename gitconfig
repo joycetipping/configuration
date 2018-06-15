@@ -1,13 +1,17 @@
 [user]
-	name  = Joyce Tipping
-	email = joyce.tipping@gmail.com
+  name  = Joyce Tipping
+  email = joyce.tipping@gmail.com
 [alias]
-  br    = branch
-  cdiff = diff --cached
-  ci    = commit -v
-  co    = checkout
-  hist  = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  st    = status
+  c   = commit
+  cm  = commit -m
+  cv  = commit -v
+  d   = diff
+  dc  = diff --cached
+  l   = log --oneline
+  ls  = log --pretty=format:"%C(green)%h\\ %C(yellow)%ad\\ %Creset%s%Cred%d\\ %Cblue[%cn]" --date=short --graph
+  ll  = log --pretty=format:"%C(green)%h\\ %C(yellow)%ad\\ %Creset%s%Cred%d\\ %Cblue[%cn]" --date=short --numstat
+  lnc = log --pretty=format:"%h\\ %ad\\ %s%d\\ [%cn]" --date=short --graph
+  st  = status
 [color]
   diff   = auto
   status = auto
