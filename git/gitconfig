@@ -24,3 +24,5 @@
   branch = auto
 [push]
   default = simple
+[core]
+  excludesfile = ~/.gitignore

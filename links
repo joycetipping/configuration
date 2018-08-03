@@ -12,7 +12,8 @@ ln -sf $conf/bash/bash_profile     $HOME/.bash_profile
 ln -sf $conf/Xmodmap               $HOME/.Xmodmap
 
 ln -sf $conf/bcrc                  $HOME/.bcrc
-ln -sf $conf/gitconfig             $HOME/.gitconfig
+ln -sf $conf/git/gitconfig         $HOME/.gitconfig
+ln -sf $conf/git/gitignore         $HOME/.gitignore
 ln -sf $conf/ssh-config            $HOME/.ssh/config
 ln -sf $conf/tmux.conf             $HOME/.tmux.conf
 
