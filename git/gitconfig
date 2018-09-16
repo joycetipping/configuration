@@ -2,7 +2,6 @@
   name  = Joyce Tipping
   email = joyce.tipping@gmail.com
 [alias]
-  ha  = "!git config -l | grep alias | cut -c 7-"  # list aliases
   br  = branch
   c   = commit
   ci  = commit -v
@@ -18,6 +17,9 @@
   s   = status -s
   st  = status
   sv  = status -v -v  # Show all staged and unstaged changes.
+
+  aliases = "! git config -l | grep alias | cut -c 7-"  # list aliases
+  snap    = "! git commit -m \"Snapshot $(date '+%-d %B %Y').\""  # commit a snapshot
 [color]
   diff   = auto
   status = auto
