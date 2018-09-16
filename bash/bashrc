@@ -84,6 +84,7 @@ alias grep="grep --color"
 alias now="date +%Y.%m%d.%H%M"
 alias passwords="vim $home/projects/utilities/passwords/passwords.txt"
 alias sus='sudo pm-suspend'
+alias today="date '+%-d %B %Y'"
 
 # }}}
 
