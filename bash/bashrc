@@ -35,11 +35,6 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   eval $(echo 'ORPHAN 40;1;31' | dircolors)
 fi
 
-# Linux specific settings
-#if [[ "$(uname)" == 'Linux' ]]; then
-#fi
-
-
 # Aliases {{{
 
 # Navigation
@@ -59,18 +54,14 @@ alias u8="cd ../../../../../../../../"
 
 # Places
 alias adam="cd $home/lib/adam/computer"
-alias aliases="vim $conf/bash/includes/aliases"
 alias blog="cd $home/projects/blog/"
 alias conf="cd $conf"
 alias diary="cd $home/projects/life/diary/"
-alias drafts='cd $home/projects/blog/_drafts; vim ./'
 alias dreams="vim $home/projects/life/dreams/$(date '+%Y').txt"
-alias fubar="cd $home/projects/company/"
+alias foobar="cd $home/projects/company/"
 alias journal="cd $home/projects/life/journal/"
-alias music="cd $home/lib/music"
 alias notes="cd $home/projects/notes/"
 alias projects="cd $home/projects/"
-alias programs="cd $home/projects/programs/"
 alias website="cd $home/projects/joycetipping.com/"
 
 # Home
@@ -78,13 +69,14 @@ alias ev0="curl http://192.168.0.34:8180/0"  # turn evaporative off
 alias evf="curl http://192.168.0.34:8180/4"  # turn evaporative to fan
 alias evc="curl http://192.168.0.34:8180/5"  # turn evaporative to cool
 
+# Date and time
+alias d="date"
+alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
+
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
-alias now="date +%Y.%m%d.%H%M"
-alias passwords="vim $home/projects/utilities/passwords/passwords.txt"
 alias sus='sudo pm-suspend'
-alias today="date '+%-d %B %Y'"
 
 # }}}
 
