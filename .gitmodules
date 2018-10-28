@@ -1,21 +1,21 @@
 [submodule "vim/vim/bundle/matchit"]
-	path = vim/vim/bundle/matchit
+	path = vim/bundle/matchit
 	url = https://github.com/tmhedberg/matchit.git
 [submodule "vim/vim/bundle/nerdcommenter"]
-	path = vim/vim/bundle/nerdcommenter
+	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/vim/bundle/nerdtree"]
-	path = vim/vim/bundle/nerdtree
+	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/vim/bundle/polyglot"]
-	path = vim/vim/bundle/polyglot
+	path = vim/bundle/polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
 [submodule "bash/includes/bash-prompt"]
 	path = bash/includes/bash-prompt
 	url = https://github.com/spencertipping/bash-prompt.git
 [submodule "vim/vim/bundle/surround"]
-	path = vim/vim/bundle/surround
+	path = vim/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/vim/bundle/repeat"]
-	path = vim/vim/bundle/repeat
+	path = vim/bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git

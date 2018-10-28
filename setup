@@ -1,0 +1,24 @@
+#!/bin/bash
+# Usage: ./setup "yes-really"
+
+if [[ $1 != yes-really ]]; then
+  {
+    echo 'WARNING: this will overwrite any dotfiles you happen to have,'
+    echo '         replacing them with symlinks to the files here.'
+    echo '         If you really want to do this, run this script as:'
+    echo "         $0 'yes-really'"
+  } >&2
+  exit 1
+fi
+
+cd "$(dirname "$0")"  # cd into the directory of this script.
+for file in *; do
+  if [[ "$file" != setup ]] && [[ "$file" != README.md ]]; then
+    mv -f "$HOME/.$file" "$HOME/.$file.original"  # move the original
+    ln -s "$PWD/$file" "$HOME/.$file"  # link the file
+  fi
+done
+
+# ssh-config needs to go to ~/.ssh/config
+rm -rf ~/.ssh/config
+ln -s ~/.ssh-config ~/.ssh/config
