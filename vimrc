@@ -44,7 +44,7 @@ nnoremap <F7> :call ToggleTerminalCopyPaste()<CR>
 
 command Dws :%s/\s\+$// "Delete whitespace
 
-filetype plugin indent on
+filetype plugin on
 syntax on
 autocmd BufRead,BufNewFile *.tsv setlocal noexpandtab
 autocmd BufRead,BufNewFile */journal/* set textwidth=100
