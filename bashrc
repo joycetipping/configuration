@@ -114,11 +114,6 @@ function serve {
 }
 
 
-# sshuttle
-# --------
-alias rvpn='sshuttle -r rorschach 10.35.0.0/16'
-
-
 # Miscellaneous
 # -------------
 count () {
