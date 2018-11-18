@@ -1,36 +1,197 @@
 Host sr1
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2022
   User spencertipping
 
 Host jr1
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2122
-
 Host jr2
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2123
-
 Host jr3
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2124
-
 Host jr4
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2125
-
 Host jr5
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2126
-
 Host jr6
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2127
-
 Host jr7
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2128
-
 Host jr8
-  HostName rorschach
+  HostName 10.35.0.2
   Port 2129
+Host jr9
+  HostName 10.35.0.2
+  Port 2130
+Host jr10
+  HostName 10.35.0.2
+  Port 2131
+Host jr11
+  HostName 10.35.0.2
+  Port 2132
+Host jr12
+  HostName 10.35.0.2
+  Port 2133
+Host jr13
+  HostName 10.35.0.2
+  Port 2134
+Host jr14
+  HostName 10.35.0.2
+  Port 2135
+Host jr15
+  HostName 10.35.0.2
+  Port 2136
+Host jr16
+  HostName 10.35.0.2
+  Port 2137
+Host jr17
+  HostName 10.35.0.2
+  Port 2138
+Host jr18
+  HostName 10.35.0.2
+  Port 2139
+Host jr19
+  HostName 10.35.0.2
+  Port 2140
+Host jr20
+  HostName 10.35.0.2
+  Port 2141
+Host jr21
+  HostName 10.35.0.2
+  Port 2142
+Host jr22
+  HostName 10.35.0.2
+  Port 2143
+Host jr23
+  HostName 10.35.0.2
+  Port 2144
+Host jr24
+  HostName 10.35.0.2
+  Port 2145
+Host jr25
+  HostName 10.35.0.2
+  Port 2146
+Host jr26
+  HostName 10.35.0.2
+  Port 2147
+Host jr27
+  HostName 10.35.0.2
+  Port 2148
+Host jr28
+  HostName 10.35.0.2
+  Port 2149
+Host jr29
+  HostName 10.35.0.2
+  Port 2150
+Host jr30
+  HostName 10.35.0.2
+  Port 2151
+Host jr31
+  HostName 10.35.0.2
+  Port 2152
+Host jr32
+  HostName 10.35.0.2
+  Port 2153
+Host jr33
+  HostName 10.35.0.2
+  Port 2154
+Host jr34
+  HostName 10.35.0.2
+  Port 2155
+Host jr35
+  HostName 10.35.0.2
+  Port 2156
+Host jr36
+  HostName 10.35.0.2
+  Port 2157
+Host jr37
+  HostName 10.35.0.2
+  Port 2158
+Host jr38
+  HostName 10.35.0.2
+  Port 2159
+Host jr39
+  HostName 10.35.0.2
+  Port 2160
+Host jr40
+  HostName 10.35.0.2
+  Port 2161
+Host jr41
+  HostName 10.35.0.2
+  Port 2162
+Host jr42
+  HostName 10.35.0.2
+  Port 2163
+Host jr43
+  HostName 10.35.0.2
+  Port 2164
+Host jr44
+  HostName 10.35.0.2
+  Port 2165
+Host jr45
+  HostName 10.35.0.2
+  Port 2166
+Host jr46
+  HostName 10.35.0.2
+  Port 2167
+Host jr47
+  HostName 10.35.0.2
+  Port 2168
+Host jr48
+  HostName 10.35.0.2
+  Port 2169
+Host jr49
+  HostName 10.35.0.2
+  Port 2170
+Host jr50
+  HostName 10.35.0.2
+  Port 2171
+Host jr51
+  HostName 10.35.0.2
+  Port 2172
+Host jr52
+  HostName 10.35.0.2
+  Port 2173
+Host jr53
+  HostName 10.35.0.2
+  Port 2174
+Host jr54
+  HostName 10.35.0.2
+  Port 2175
+Host jr55
+  HostName 10.35.0.2
+  Port 2176
+Host jr56
+  HostName 10.35.0.2
+  Port 2177
+Host jr57
+  HostName 10.35.0.2
+  Port 2178
+Host jr58
+  HostName 10.35.0.2
+  Port 2179
+Host jr59
+  HostName 10.35.0.2
+  Port 2180
+Host jr60
+  HostName 10.35.0.2
+  Port 2181
+Host jr61
+  HostName 10.35.0.2
+  Port 2182
+Host jr62
+  HostName 10.35.0.2
+  Port 2183
+Host jr63
+  HostName 10.35.0.2
+  Port 2184
+Host jr64
+  HostName 10.35.0.2
+  Port 2185
