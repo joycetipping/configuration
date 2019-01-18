@@ -77,7 +77,9 @@ alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
+alias pyserver='python -m SimpleHTTPServer 8080'
 alias sus='sudo pm-suspend'
+alias sizes='du -sh | sort -h'
 
 # }}}
 
@@ -108,7 +110,7 @@ export R_LIBS="$home/.R:$R_LIBS"
 
 # Ruby
 # ----
-function serve {
+function rubyserver {
   port="${1:-3000}"
   ruby -run -e httpd . -p $port
 }
