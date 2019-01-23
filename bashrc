@@ -75,7 +75,7 @@ alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
 # Other
-alias audio='rec ~/media/audio/audacity/`date +%Y.%m%d.%H%M%S`.ogg'
+alias audio='rec ~/media/audio/sox/`date +%Y.%m%d.%H%M%S`.ogg'
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
 alias pyserver='python -m SimpleHTTPServer 8080'
