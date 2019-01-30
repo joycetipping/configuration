@@ -31,6 +31,8 @@ set listchars=tab:▸·,trail:·
 "Modeline
 set modeline
 set modelines=5
+"Fix highlighting
+highlight Search ctermfg=0 ctermbg=2
 
 let mapleader = " "
 
