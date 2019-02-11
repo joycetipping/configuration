@@ -3,10 +3,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Define two very important variables
-export home="$HOME"
-export conf="$home/projects/configuration"
-
 # Adjust the path
 [[ -d "$home/bin" ]] && PATH="$PATH:$home/bin"  # Include user's private bin
 
@@ -15,13 +11,7 @@ export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 export TERM='xterm-256color'
 
-# Bash history
-HISTCONTROL=ignoredups:ignorespace  # Don't put duplicate lines in the history.
-shopt -s histappend                 # Append to the history file, don't overwrite it
-HISTSIZE=
-HISTFILESIZE=
-
-# Source Spencer's bash prompt
+# Load dotbash
 [[ -d ~/.bash ]] || git clone git@github.com:joycetipping/dotbash.git "$home/.bash"
 source "$home/.bash/init"
 
