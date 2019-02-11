@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # Adjust the path
-[[ -d "$home/bin" ]] && PATH="$PATH:$home/bin"  # Include user's private bin
+[[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"  # Include user's private bin
 
 # Terminal settings
 export EDITOR="/usr/bin/vim"
@@ -12,8 +12,8 @@ export VISUAL="/usr/bin/vim"
 export TERM='xterm-256color'
 
 # Load dotbash
-[[ -d ~/.bash ]] || git clone git@github.com:joycetipping/dotbash.git "$home/.bash"
-source "$home/.bash/init"
+[[ -d ~/.bash ]] || git clone git@github.com:joycetipping/dotbash.git "$HOME/.bash"
+source "$HOME/.bash/init"
 
 # Mac specific settings
 if [[ "$(uname)" == 'Darwin' ]]; then
@@ -43,17 +43,17 @@ alias u7="cd ../../../../../../../"
 alias u8="cd ../../../../../../../../"
 
 # Places
-alias adam="cd $home/lib/adam/computer"
-alias blog="cd $home/projects/blog/"
+alias adam="cd $HOME/lib/adam/computer"
+alias blog="cd $HOME/projects/blog/"
 alias conf="cd $conf"
-alias diary="cd $home/projects/life/diary/"
-alias dreams="vim $home/projects/life/dreams/$(date '+%Y').txt"
-alias foobar="cd $home/projects/company/"
-alias journal="cd $home/projects/life/journal/"
-alias notes="cd $home/projects/notes/"
-alias projects="cd $home/projects/"
-alias safe="cd $home/projects/safe/"
-alias website="cd $home/projects/joycetipping.com/"
+alias diary="cd $HOME/projects/life/diary/"
+alias dreams="vim $HOME/projects/life/dreams/$(date '+%Y').txt"
+alias foobar="cd $HOME/projects/company/"
+alias journal="cd $HOME/projects/life/journal/"
+alias notes="cd $HOME/projects/notes/"
+alias projects="cd $HOME/projects/"
+alias safe="cd $HOME/projects/safe/"
+alias website="cd $HOME/projects/joycetipping.com/"
 
 # Home
 alias ev0="curl http://192.168.0.34:8180/0"  # turn evaporative off
@@ -78,7 +78,7 @@ alias sizes='du -sh | sort -h'
 
 # BC
 # --
-export BC_ENV_ARGS="$home/.bcrc"
+export BC_ENV_ARGS="$HOME/.bcrc"
 
 
 # Exiftool
@@ -96,7 +96,7 @@ dates () {
 
 # R
 # -
-export R_LIBS="$home/.R:$R_LIBS"
+export R_LIBS="$HOME/.R:$R_LIBS"
 
 
 # Ruby
