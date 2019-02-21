@@ -45,7 +45,7 @@ alias u8="cd ../../../../../../../../"
 # Places
 alias adam="cd $HOME/lib/adam/computer"
 alias blog="cd $HOME/projects/blog/"
-alias conf="cd $conf"
+alias conf="cd $HOME/projects/configuration/"
 alias diary="cd $HOME/projects/life/diary/"
 alias dreams="vim $HOME/projects/life/dreams/$(date '+%Y').txt"
 alias foobar="cd $HOME/projects/company/"
@@ -65,12 +65,38 @@ alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
 # Other
-alias audio='rec -r 48k -b 32 ~/media/audio/sox/`date +%Y.%m%d.%H%M%S`.ogg'
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
 alias pyserver='python -m SimpleHTTPServer 8080'
 alias sus='sudo pm-suspend'
 alias sizes='du -sh | sort -h'
+
+# }}}
+
+# Functions {{{
+
+audio () {
+  #arecord -f cd -t raw | oggenc - -r -o ~/media/audio/arecord/`date +%Y.%m%d.%H%M%S`.ogg
+  rec -r 48k -b 32 ~/media/audio/sox/`date +%Y.%m%d.%H%M%S`.ogg
+}
+
+count () {
+  # Count the number of files in the given directories
+  if [[ "$#" == "0" ]]
+  then
+    ls | wc -l
+  else
+    for var in "$@";
+    do
+      ls "$var" | wc -l
+    done
+  fi
+}
+
+csum () {
+  # Sum the number of files in the given directories
+  count "$@" | awk '{s+=$1} END {print s}'
+}
 
 # }}}
 
@@ -104,27 +130,6 @@ export R_LIBS="$HOME/.R:$R_LIBS"
 function rubyserver {
   port="${1:-3000}"
   ruby -run -e httpd . -p $port
-}
-
-
-# Miscellaneous
-# -------------
-count () {
-  # Count the number of files in the given directories
-  if [[ "$#" == "0" ]]
-  then
-    ls | wc -l
-  else
-    for var in "$@";
-    do
-      ls "$var" | wc -l
-    done
-  fi
-}
-
-csum () {
-  # Sum the number of files in the given directories
-  count "$@" | awk '{s+=$1} END {print s}'
 }
 
 # }}}
