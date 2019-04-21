@@ -65,7 +65,7 @@ alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
 # Other
-alias baby="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .1,.2 -inf,-30,-inf,-30,-30 0 -90 .1"
+alias baby="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
 alias pyserver='python -m SimpleHTTPServer 8080'
