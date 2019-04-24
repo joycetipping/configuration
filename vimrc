@@ -33,6 +33,7 @@ set modeline
 set modelines=5
 "Fix highlighting
 highlight Search ctermfg=0 ctermbg=2
+highlight Visual ctermfg=0 ctermbg=5
 
 let mapleader = " "
 
