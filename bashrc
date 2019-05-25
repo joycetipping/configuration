@@ -104,6 +104,10 @@ howlong () {
   ls $@ | xargs -I % bash -c 'echo -n %; ffprobe -i % 2>&1 | grep Duration'
 }
 
+sshplay () {
+  cat $1 | ssh $2 '/usr/local/bin/play -'
+}
+
 # }}}
 
 # Programs {{{
