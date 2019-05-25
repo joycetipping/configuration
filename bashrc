@@ -101,7 +101,7 @@ csum () {
 
 howlong () {
   # Display the length of an audio file
-  ffmpeg -i $1 2>&1 | grep Duration
+  ls $@ | xargs -I % bash -c 'echo -n %; ffprobe -i % 2>&1 | grep Duration'
 }
 
 # }}}
