@@ -99,6 +99,11 @@ csum () {
   count "$@" | awk '{s+=$1} END {print s}'
 }
 
+howlong () {
+  # Display the length of an audio file
+  ffmpeg -i $1 2>&1 | grep Duration
+}
+
 # }}}
 
 # Programs {{{
