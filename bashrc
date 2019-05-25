@@ -108,6 +108,17 @@ sshplay () {
   cat $1 | ssh $2 '/usr/local/bin/play -'
 }
 
+fftruncate () {
+  duration=$1
+  infile=$2
+
+  filename=$(basename infile)
+  extension=${infile##*.}
+  outfile=${3:-tmp.$extension}
+
+  ffmpeg -t $duration -i $infile $outfile
+}
+
 # }}}
 
 # Programs {{{
