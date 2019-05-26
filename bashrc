@@ -116,7 +116,7 @@ fftruncate () {
   extension=${infile##*.}
   outfile=${3:-tmp.$extension}
 
-  ffmpeg -t $duration -i $infile $outfile
+  ffmpeg -t $duration -i $infile -c copy $outfile
 }
 
 # }}}
