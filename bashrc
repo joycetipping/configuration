@@ -43,7 +43,6 @@ alias u7="cd ../../../../../../../"
 alias u8="cd ../../../../../../../../"
 
 # Places
-alias adam="cd $HOME/lib/adam/computer"
 alias blog="cd $HOME/projects/blog/"
 alias conf="cd $HOME/projects/configuration/"
 alias diary="cd $HOME/projects/life/diary/"
@@ -64,8 +63,11 @@ alias evc="curl http://192.168.0.34:8180/5"  # turn evaporative to cool
 alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
-# Other
+# Kids
+alias adam="ssh adam@adam 'ffmpeg -r 5 -f x11grab -s 1366x768 -i :0.0 -b:v 4000k -f flv -' | ffplay -"
 alias baby="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
+
+# Other
 alias bc="echo Starting bc -l;echo;bc -l"
 alias grep="grep --color"
 alias pyserver='python -m SimpleHTTPServer 8080'
