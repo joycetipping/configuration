@@ -65,7 +65,8 @@ alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
 # Kids
 alias adam="ssh adam@adam 'ffmpeg -r 5 -f x11grab -s 1366x768 -i :0.0 -b:v 4000k -f flv -' | ffplay -"
-alias baby="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
+alias baby="ssh gadget 'arecord -f cd -t wav' | play -t wav - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
+alias kidsroom="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
 
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
