@@ -311,6 +311,16 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; The only one of these I ever use is suggested LANGUAGE pragmas.
+  (setq-default haskell-process-suggest-add-package nil)
+  (setq-default haskell-process-suggest-haskell-docs-imports nil)
+  (setq-default haskell-process-suggest-hoogle-imports nil)
+  (setq-default haskell-process-suggest-no-warn-orphans nil)
+  (setq-default haskell-process-suggest-overloaded-strings nil)
+  (setq-default haskell-process-suggest-remove-import-lines nil)
+  (setq-default haskell-process-suggest-restart nil)
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
