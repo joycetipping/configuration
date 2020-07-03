@@ -22,3 +22,5 @@ done
 # ssh-config needs to go to ~/.ssh/config
 rm -rf ~/.ssh/config
 ln -s ~/.ssh-config ~/.ssh/config
+
+rm ~/.vim/.vim
