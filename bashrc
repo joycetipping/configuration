@@ -54,6 +54,10 @@ alias projects="cd $HOME/projects/"
 alias safe="cd $HOME/projects/safe/"
 alias website="cd $HOME/projects/joycetipping.com/"
 
+# Emacs
+alias em="emacs -nw"
+alias en="emacsclient -nw"
+
 # Home
 alias ev0="curl http://192.168.0.34:8180/0"  # turn evaporative off
 alias evf="curl http://192.168.0.34:8180/4"  # turn evaporative to fan
