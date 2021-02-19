@@ -51,6 +51,7 @@ alias foobar="cd $HOME/projects/company/"
 alias journal="cd $HOME/projects/life/journal/"
 alias notes="cd $HOME/projects/notes/"
 alias projects="cd $HOME/projects/"
+alias play="cd $HOME/projects/playground/"
 alias safe="cd $HOME/projects/safe/"
 alias website="cd $HOME/projects/joycetipping.com/"
 
