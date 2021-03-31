@@ -296,6 +296,7 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup nil
+
    ))
 
 (defun dotspacemacs/user-init ()
@@ -316,6 +317,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq-default rust-indent-offset 2)
   (setq-default python-indent-offset 2)
   (setq-default perl-indent-level 2)
+
+  (cd "~/projects/")
   )
 
 (defun dotspacemacs/user-config ()
@@ -336,6 +339,10 @@ you should place your code here."
   (setq-default haskell-process-suggest-restart nil)
 
   (spacemacs/toggle-highlight-current-line-globally-off)
+
+  (set-face-attribute 'region nil :background "#f09")
+  (set-face-attribute 'lazy-highlight nil :foreground "black" :background "yellow")
+  (set-face-attribute 'isearch nil :foreground "black" :background "yellow")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
