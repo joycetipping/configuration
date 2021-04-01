@@ -161,5 +161,10 @@ function rubyserver {
   ruby -run -e httpd . -p $port
 }
 
+
+# Haskell Stack
+# -------------
+PATH="$PATH:$HOME/.local/bin"
+
 # }}}
 
