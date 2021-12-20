@@ -53,12 +53,13 @@ values."
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
+     themes-megapack
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(molokai-theme)
+   dotspacemacs-additional-packages '(molokai-theme flycheck)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -137,8 +138,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Monaco"
-                               :size 12
+   dotspacemacs-default-font '("Ubuntu Mono"
+                               :size 24
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
