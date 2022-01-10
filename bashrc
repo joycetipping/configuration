@@ -43,6 +43,7 @@ alias u7="cd ../../../../../../../"
 alias u8="cd ../../../../../../../../"
 
 # Places
+alias asqi="cd $HOME/projects/caterwaullabs/asqi/"
 alias blog="cd $HOME/projects/blog/"
 alias conf="cd $HOME/projects/configuration/"
 alias diary="cd $HOME/projects/life/diary/"
