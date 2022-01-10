@@ -56,7 +56,7 @@ URxvt.geometry: 67x100
 
 URxvt.scrollBar: false
 URxvt.thickness: 2
-URxvt.font: xft:Ubuntu Mono:size=16:hinting=none
+URxvt.font: xft:Ubuntu Mono:size=32:hinting=none
 
 URxvt*saveLines: 65536
 
