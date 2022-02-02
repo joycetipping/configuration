@@ -71,7 +71,7 @@ alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
 # Marriage
-alias whatthehellspencer="sshuttle -r ubuntu@dev.spencertipping.com --exclude 10/8 0/0"
+alias whatthehellspencer="sshuttle -r ubuntu@dev.spencertipping.com --exclude 10.0.0.0/8 0/0"
 
 # Kids
 alias adam="ssh adam@adam 'ffmpeg -r 5 -f x11grab -s 1366x768 -i :0.0 -b:v 4000k -f flv -' | ffplay -"
