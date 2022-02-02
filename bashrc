@@ -56,7 +56,7 @@ alias projects="cd $HOME/projects/"
 alias play="cd $HOME/projects/playground/"
 alias safe="cd $HOME/projects/safe/"
 alias website="cd $HOME/projects/joycetipping.com/"
-alias whatthehellspencer="sshuttle -r ubuntu@dev.spencertipping.com 0/0`"
+alias whatthehellspencer="sshuttle -r ubuntu@dev.spencertipping.com 0/0"
 
 # Emacs
 alias em="emacs -nw"
