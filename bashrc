@@ -56,7 +56,6 @@ alias projects="cd $HOME/projects/"
 alias play="cd $HOME/projects/playground/"
 alias safe="cd $HOME/projects/safe/"
 alias website="cd $HOME/projects/joycetipping.com/"
-alias whatthehellspencer="sshuttle -r ubuntu@dev.spencertipping.com 0/0"
 
 # Emacs
 alias em="emacs -nw"
@@ -70,6 +69,9 @@ alias evc="curl http://192.168.0.34:8180/5"  # turn evaporative to cool
 # Date and time
 alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
+
+# Marriage
+alias whatthehellspencer="sshuttle -r ubuntu@dev.spencertipping.com --exclude 10/8 0/0"
 
 # Kids
 alias adam="ssh adam@adam 'ffmpeg -r 5 -f x11grab -s 1366x768 -i :0.0 -b:v 4000k -f flv -' | ffplay -"
