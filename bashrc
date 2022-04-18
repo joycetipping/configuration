@@ -70,6 +70,9 @@ alias evc="curl http://192.168.0.34:8180/5"  # turn evaporative to cool
 alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
+# Marriage
+alias whatthehellspencer="sshuttle -r ubuntu@dev.spencertipping.com --exclude 10.0.0.0/8 0/0"
+
 # Kids
 alias adam="ssh adam@adam 'ffmpeg -r 5 -f x11grab -s 1366x768 -i :0.0 -b:v 4000k -f flv -' | ffplay -"
 alias baby="ssh gadget 'arecord -f cd -t raw' | play -e signed-integer -b 16 -L -c 2 -r 44100 -t raw - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
