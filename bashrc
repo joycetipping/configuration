@@ -80,6 +80,7 @@ alias kidsroom="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.
 
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
+alias facebook="firejail --private=/home/joyce/facebook --private-tmp --nodbus google-chrome"
 alias ghci="stack ghci"
 alias grep="grep --color"
 alias pyserver='python -m SimpleHTTPServer 8080'
