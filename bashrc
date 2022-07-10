@@ -78,9 +78,12 @@ alias adam="ssh adam@adam 'ffmpeg -r 5 -f x11grab -s 1366x768 -i :0.0 -b:v 4000k
 alias baby="ssh gadget 'arecord -f cd -t raw' | play -e signed-integer -b 16 -L -c 2 -r 44100 -t raw - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
 alias kidsroom="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.01 -inf,-40,-inf,-40,-40 0 -90 .1"
 
+# Firejail
+alias facebook="firejail --private=/home/joyce/facebook --private-tmp --nodbus google-chrome"
+alias tiktok="firejail --private=/home/joyce/tiktok --private-tmp --nodbus google-chrome"
+
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
-alias facebook="firejail --private=/home/joyce/facebook --private-tmp --nodbus google-chrome"
 alias ghci="stack ghci"
 alias grep="grep --color"
 alias pyserver='python -m SimpleHTTPServer 8080'
