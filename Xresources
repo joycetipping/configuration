@@ -1,22 +1,36 @@
 ! vim: set syntax=xdefaults :
 
-Xft.dpi: 96
+Xft.dpi: 180
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintnone
 Xft.rgba: rgb
+
+Emacs*useXIM: true
+
+URxvt.inputMethod: ibus
 
 URxvt.iso14755:    false
 URxvt.iso14755_52: false
 
 URxvt.perl-ext-common: default,font-size,transparency
 URxvt.depth: 32
-URxvt.borderLess: false
+URxvt.borderLess: true
 URxvt.internalBorder: 0
 URxvt.externalBorder: 0
-URxvt*visualBell: false
+URxvt.urgentOnBell: false
+URxvt.visualBell: false
 URxvt*scrollTtyOutput: false
 URxvt*scrollTtyKeypress: true
+
+URxvt*saveLines: 65536
+URxvt*borderless: true
+
+URxvt.background: rgba:0000/0000/0000/8000
+URxvt.foreground: rgba:ffff/ffff/ffff/ffff
+
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
 
 URxvt.keysym.C-minus: font-size:decrease
 URxvt.keysym.C-plus:  font-size:increase
@@ -40,8 +54,8 @@ URxvt.keysym.C-M-asciicircum: transparency:ualpha=e000
 URxvt.keysym.C-M-ampersand:   transparency:ualpha=ffff
 
 URxvt.transparency.bgcolor:    rgba:0000/0000/0000/XXXX
-URxvt.transparency.bgopacity:  d000
-URxvt.transparency.bguopacity: d000
+URxvt.transparency.bgopacity:  8000
+URxvt.transparency.bguopacity: 1000
 
 URxvt*print-pipe: cat > /dev/null
 
@@ -49,52 +63,101 @@ URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Left: \033[1;5D
 URxvt.keysym.Control-Right: \033[1;5C
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
-URxvt.geometry: 67x100
+URxvt.geometry: 80x20
 
 URxvt.scrollBar: false
-URxvt.thickness: 2
-URxvt.font: xft:Ubuntu Mono:size=32:hinting=none
+URxvt.thickness: 0
 
-URxvt*saveLines: 65536
+#ifdef SRVR_iya
+URxvt.font: xft:Ubuntu Mono:size=18:hinting=none
+URxvt*lineSpace: 0
+URxvt*letterSpace: -1
 
-URxvt.background: rgba:0000/0000/0000/c000
-URxvt.foreground: rgba:ffff/ffff/ffff/ffff
+!URxvt.font: xft:Aerial Mono:size=20:hinting=none
+!URxvt.font: xft:Cascadia Code:size=20:hinting=none
+!URxvt.font: xft:Hack:size=16:hinting=none:style=Regular
+!URxvt.font: xft:M+ 1mn:size=20:hinting=full:style=Retina
+!URxvt.font: xft:Major Mono Display:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Migu 2M:size=20:hinting=none
+!URxvt.font: xft:Monoid HalfTight:size=14:hinting=none:style=Regular
+!URxvt.font: xft:Share Tech Mono:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Source Code Pro:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Unispace:size=20:hinting=none
+!URxvt.font: xft:monofur:size=20:hinting=none:style=Regular
+!URxvt.font: xft:mononoki:size=20:hinting=none
+#endif
 
-URxvt*lineSpace: -5
+#ifdef SRVR_iota
+URxvt.font: xft:JetBrains Mono:size=16:hinting=none
+URxvt*lineSpace: 0
+URxvt*letterSpace: -1
+
+!URxvt.font: xft:Aerial Mono:size=20:hinting=none
+!URxvt.font: xft:Cascadia Code:size=20:hinting=none
+!URxvt.font: xft:Hack:size=16:hinting=none:style=Regular
+!URxvt.font: xft:M+ 1mn:size=20:hinting=full:style=Retina
+!URxvt.font: xft:Major Mono Display:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Migu 2M:size=20:hinting=none
+!URxvt.font: xft:Monoid HalfTight:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Share Tech Mono:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Source Code Pro:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Unispace:size=20:hinting=none
+!URxvt.font: xft:monofur:size=20:hinting=none:style=Regular
+!URxvt.font: xft:mononoki:size=20:hinting=none
+#endif
+
+#ifdef SRVR_ijen
+URxvt.font: xft:Ubuntu Mono:size=18:hinting=none
+URxvt*lineSpace: 0
+URxvt*letterSpace: -1
+
+!URxvt.font: xft:Aerial Mono:size=20:hinting=none
+!URxvt.font: xft:Cascadia Code:size=20:hinting=none
+!URxvt.font: xft:Hack:size=16:hinting=none:style=Regular
+!URxvt.font: xft:M+ 1mn:size=20:hinting=full:style=Retina
+!URxvt.font: xft:Major Mono Display:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Migu 2M:size=20:hinting=none
+!URxvt.font: xft:Monoid HalfTight:size=14:hinting=none:style=Regular
+!URxvt.font: xft:Share Tech Mono:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Source Code Pro:size=20:hinting=none:style=Regular
+!URxvt.font: xft:Unispace:size=20:hinting=none
+!URxvt.font: xft:monofur:size=20:hinting=none:style=Regular
+!URxvt.font: xft:mononoki:size=20:hinting=none
+#endif
+
+#ifdef SRVR_iniidae
+URxvt*lineSpace: 0
 URxvt*letterSpace: -2
 
-URxvt*cursorBlink: true
-!URxvt*cursorUnderline: true
+URxvt.font: xft:JetBrains Mono:size=8:hinting=none
+#endif
 
+! Indicator color scheme
+#if 0
+URxvt*color0: gray
+URxvt*color1: red
+URxvt*color2: orange
+URxvt*color3: yellow
+URxvt*color4: green
+URxvt*color5: cyan
+URxvt*color6: blue
+URxvt*color7: purple
 
-! Molokai color scheme
-#if 1
-URxvt*color0: #171717
-URxvt*color1: #fe4386
-URxvt*color2: #a6e32d
-URxvt*color3: #e6da73
-URxvt*color4: #0094d9
-URxvt*color5: #9b37ff
-URxvt*color6: #50b7d9
-URxvt*color7: #c7c7c7
-
-URxvt*color8:  #686868
-URxvt*color9:  #fa80ac
-URxvt*color10: #bde371
-URxvt*color11: #fff27f
-URxvt*color12: #00beff
-URxvt*color13: #be9eff
-URxvt*color14: #5ed7ff
-URxvt*color15: #ffffff
+URxvt*color8: DarkSlateGray
+URxvt*color9: coral1
+URxvt*color10: burlywood
+URxvt*color11: beige
+URxvt*color12: OliveDrab1
+URxvt*color13: SpringGreen1
+URxvt*color14: CadetBlue1
+URxvt*color15: DarkOrchid
 #endif
 
 ! Mono color scheme (WIP)
 #if 0
 URxvt*color0: #a0a0a0
-URxvt*color1: #ffffff
+URxvt*color1: #e0e0e0
 URxvt*color2: #808080
 URxvt*color3: #c8c8c8
 URxvt*color4: #80b880
@@ -110,4 +173,25 @@ URxvt*color12: #f4c590
 URxvt*color13: #b0b0b0
 URxvt*color14: #7088b0
 URxvt*color15: #ffffff
+#endif
+
+! Ayu color scheme (modified)
+#if 1
+URxvt*color0: #abb0b6
+URxvt*color1: #fa8d3e
+URxvt*color2: #86c380
+URxvt*color3: #e6b450
+URxvt*color4: #5ccfe6
+URxvt*color5: #f07178
+URxvt*color6: #95e6cb
+URxvt*color7: #626a73
+
+URxvt*color8:  #fafafa
+URxvt*color9:  #ffa759
+URxvt*color10: #bae67e
+URxvt*color11: #ffee99
+URxvt*color12: #73d0ff
+URxvt*color13: #ffa759
+URxvt*color14: #95e6cb
+URxvt*color15: #707a8c
 #endif

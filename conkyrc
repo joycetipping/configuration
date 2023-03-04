@@ -1,0 +1,87 @@
+use_xft yes
+xftalpha 0.8
+text_buffer_size 2048
+
+temperature_unit celsius
+update_interval 2
+update_interval_on_battery 5
+total_run_times 0
+
+own_window yes
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_transparent no
+own_window_type override
+own_window_hints below,sticky,skip_taskbar,skip_pager
+own_window_colour 000000
+double_buffer yes
+
+if_up_strictness link
+
+maximum_width 1432
+minimum_size 1432 240
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+border_width 1
+
+default_graph_size 400 16
+
+draw_graph_borders no
+short_units yes
+
+alignment bottom_right
+
+gap_x 0
+gap_y -238
+
+no_buffers yes
+
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale yes
+
+use_spacer none
+
+TEXT
+${font Jura:size=32}
+${voffset -52}${color 404040}
+${voffset -52}${voffset 42}${goto 0}${offset 0}
+${voffset -52}
+${voffset -52}${voffset -4}${goto 0}${offset 0}${downspeedgraph wlp0s20f3 16,380 -l}
+${voffset -52}${goto 0}${offset 384}${upspeedgraph   wlp0s20f3 16,380 -l}${voffset 4}${goto 0}${offset 0}
+${voffset -52}
+${voffset -52}${voffset 12}${goto 0}${offset 0}${cpubar cpu1 8,188}${goto 0}${offset 192}${cpubar cpu2 8,188}
+${voffset -52}  ${goto 0}${offset 384}${cpubar cpu3 8,188}${goto 0}${offset 576}${cpubar cpu4 8,188}
+${voffset -52}${voffset 12}${goto 0}${offset 0}${cpubar cpu5 8,188}${goto 0}${offset 192}${cpubar cpu6 8,188}
+${voffset -52}  ${goto 0}${offset 384}${cpubar cpu7 8,188}${goto 0}${offset 576}${cpubar cpu8 8,188}
+${voffset -52}${voffset 12}${goto 0}${offset 0}
+${voffset -52}${goto 0}${offset 192}
+${voffset -52}  ${color 808080}${goto 0}${offset 192}${membar  8,960}
+${voffset -52}                 ${voffset -12}${goto 0}${offset 576}${goto 0}${offset 960}${goto 0}${offset 1080}${swapbar 8,72} ${goto 0}${offset 576}
+${voffset -52}  ${if_match ${exec cat /sys/class/power_supply/AC/online} == 1}${color 303030}${else}${color 808080}${endif}
+${voffset -52}                 ${voffset 24}${goto 0}${offset 576}${battery_bar 8,860}
+${voffset -52}${voffset -32}${goto 0}${offset 0}
+${voffset -52}${goto 0}${offset 1216}${color 707070}${alignr 110}${time %m%d}
+${voffset -52}${goto 0}${offset 1326}${color a0a0a0}${alignr 0}${time %H%M}
+${voffset -52}
+${voffset -52}${voffset 62}${goto 0}${offset 768}${font Jura:size=16}${color c0c0c0}
+${voffset -52}${goto 0}${offset 672}
+${voffset -26}${goto 0}${offset 672}${downspeed wlp0s20f3}
+${voffset -26}${goto 0}${offset 768}${upspeed   wlp0s20f3}
+${voffset -26}${goto 0}${offset 864}${diskio_read  /dev/nvme0n1} ${voffset -46}${goto 0}${offset 864}${fs_free /}        ${voffset 46}${goto 0}${offset 864}
+${voffset -26}${goto 0}${offset 960}${diskio_write /dev/nvme0n1} ${voffset -46}${goto 0}${offset 960}${hwmon 1 temp 1}°C ${voffset 46}${goto 0}${offset 960}
+${voffset -26}
+${voffset -26}${voffset -78}${goto 0}${offset 864}
+${voffset -26}${goto 0}${offset 1080}${color f0f0f0}${wireless_essid wlp0s20f3} ${color c0c0c0}${wireless_link_qual_perc wlp0s20f3}%
+${voffset -26}${goto 0}${offset 1208}${color 909090}${alignr 0}${wireless_ap wlp0s20f3}
+${voffset -26}
+${voffset -26}${voffset 82}${goto 0}${offset 960}${goto 0}${offset 1032}${color 303030}${loadgraph 16,355 -l} ${voffset -4}${goto 0}${offset 960}
+${voffset -26}${goto 0}${offset 960}${color c0c0c0}${alignr 0}${loadavg 1}
+${voffset -26}
+${voffset -26}${voffset 20}${goto 0}${offset 960}${alignr 128}${battery_time}
+${voffset -26}${goto 0}${offset 960}${alignr 0}${exec sed s/000$// /sys/class/power_supply/BAT0/power_now}mW
+${voffset -26}

@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # Adjust the path
-[[ -d "$HOME/bin" ]] && PATH="$PATH:$HOME/bin"  # Include user's private bin
+[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"  # Include user's private bin
 
 # Terminal settings
 export EDITOR="/usr/bin/vim"
