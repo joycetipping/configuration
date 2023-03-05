@@ -81,6 +81,8 @@ alias kidsroom="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.
 # Firejail
 alias facebook="firejail --private=/home/joyce/facebook --private-tmp --nodbus google-chrome"
 alias tiktok="firejail --private=/home/joyce/tiktok --private-tmp --nodbus google-chrome"
+alias noclick="xinput set-prop 12 'libinput Tapping Enabled' 0"
+alias yesclick="xinput set-prop 12 'libinput Tapping Enabled' 1"
 
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"

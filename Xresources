@@ -133,6 +133,27 @@ URxvt*letterSpace: -2
 URxvt.font: xft:JetBrains Mono:size=8:hinting=none
 #endif
 
+! Molokai color scheme
+#if 1
+URxvt*color0: #171717
+URxvt*color1: #fe4386
+URxvt*color2: #a6e32d
+URxvt*color3: #e6da73
+URxvt*color4: #0094d9
+URxvt*color5: #9b37ff
+URxvt*color6: #50b7d9
+URxvt*color7: #c7c7c7
+
+URxvt*color8:  #686868
+URxvt*color9:  #fa80ac
+URxvt*color10: #bde371
+URxvt*color11: #fff27f
+URxvt*color12: #00beff
+URxvt*color13: #be9eff
+URxvt*color14: #5ed7ff
+URxvt*color15: #ffffff
+#endif
+
 ! Indicator color scheme
 #if 0
 URxvt*color0: gray
@@ -176,7 +197,7 @@ URxvt*color15: #ffffff
 #endif
 
 ! Ayu color scheme (modified)
-#if 1
+#if 0
 URxvt*color0: #abb0b6
 URxvt*color1: #fa8d3e
 URxvt*color2: #86c380
