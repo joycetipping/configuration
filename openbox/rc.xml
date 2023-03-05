@@ -2,11 +2,15 @@
 <openbox_config xmlns="http://openbox.org/3.4/rc">
   <resistance><strength>80</strength>
               <screen_edge_strength>80</screen_edge_strength></resistance>
-  <!--
-  <focus> <focusNew>yes</focusNew>   <followMouse>yes</followMouse>
-          <focusLast>yes</focusLast> <underMouse>yes</underMouse>
-          <focusDelay>0</focusDelay> <raiseOnFocus>no</raiseOnFocus> </focus>
-  -->
+
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>yes</followMouse>
+    <focusLast>yes</focusLast>
+    <!--<underMouse>yes</underMouse>-->
+    <focusDelay>0</focusDelay>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
 
   <placement><policy>Smart</policy></placement>
 
@@ -172,5 +176,8 @@
 
       <!-- middle of the screen -->
     <keybind key='W-0'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
+
+    <!-- Screenshot -->
+    <keybind key='Print'><action name='Execute'><command>scrot ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
   </keyboard>
 </openbox_config>

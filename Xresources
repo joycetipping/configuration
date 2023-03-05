@@ -30,7 +30,7 @@ URxvt.background: rgba:0000/0000/0000/8000
 URxvt.foreground: rgba:ffff/ffff/ffff/ffff
 
 URxvt*cursorBlink: true
-URxvt*cursorUnderline: true
+!URxvt*cursorUnderline: true
 
 URxvt.keysym.C-minus: font-size:decrease
 URxvt.keysym.C-plus:  font-size:increase

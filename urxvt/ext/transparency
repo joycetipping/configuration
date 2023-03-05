@@ -14,7 +14,7 @@ sub set_bg_opacity
 sub on_start
 {
   my $self = shift;
-  $$self{bgopacity}  = $self->x_resource('bgopacity')  || 'd000';
+  $$self{bgopacity}  = $self->x_resource('bgopacity')  || 'b000';
   $$self{bguopacity} = $self->x_resource('bguopacity') || '1000';
   $$self{bgcolor}    = $self->x_resource('bgcolor')    || 'rgba:0000/0000/0000/XXXX';
 
