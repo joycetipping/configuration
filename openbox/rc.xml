@@ -2,10 +2,11 @@
 <openbox_config xmlns="http://openbox.org/3.4/rc">
   <resistance><strength>80</strength>
               <screen_edge_strength>80</screen_edge_strength></resistance>
-
+  <!--
   <focus> <focusNew>yes</focusNew>   <followMouse>yes</followMouse>
           <focusLast>yes</focusLast> <underMouse>yes</underMouse>
           <focusDelay>0</focusDelay> <raiseOnFocus>no</raiseOnFocus> </focus>
+  -->
 
   <placement><policy>Smart</policy></placement>
 
