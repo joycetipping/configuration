@@ -9,6 +9,8 @@ init_session() {
   xrdb ~/.Xresources
   feh --bg-fill $env/bgi
   xcompmgr &
+  tint2 &
+  pnmixer &
   #ibus-daemon -rdx &
 
   case `hostname` in
