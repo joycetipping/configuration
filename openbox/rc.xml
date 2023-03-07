@@ -146,58 +146,41 @@
     <keybind key="W-S-Tab"><action name="PreviousWindow"><allDesktops>yes</allDesktops></action></keybind>
 
     <!-- Windows -->
+    <!--
     <keybind key='W-Up'>  <action name='Maximize'></action></keybind>
     <keybind key='W-Down'><action name='Unmaximize'></action></keybind>
-    <keybind key='W-f'>   <action name='ToggleMaximize'><direction>horizontal</direction></action></keybind>
+    -->
+    <keybind key='W-f'>   <action name='ToggleMaximize'></action></keybind>
+    <keybind key='W-g'>   <action name='ToggleMaximize'><direction>horizontal</direction></action></keybind>
     <keybind key='W-v'>   <action name='ToggleMaximize'><direction>vertical</direction></action></keybind>
     <keybind key="W-d">   <action name="ToggleShowDesktop"/></keybind>
 
     <!-- Window tiling -->
-      <!-- Tint2 menu bar is 50 tall, hence all the heights are -50 -->
+      <!-- Screen is 3840 x 2400. Tint2 menu bar is 60 tall. -->
 
       <!-- side-by-side halves -->
-      <keybind key='W-Left'> <action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>0</y><width>1920</width><height>2350</height></action></keybind>
-      <keybind key='W-Right'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>0</y><width>1920</width><height>2350</height></action></keybind>
+      <keybind key='W-Left'> <action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x>   <y>0</y><width>1920</width></action><action name='Maximize'><direction>vertical</direction></action></keybind>
+      <keybind key='W-Right'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>0</y><width>1920</width></action><action name='Maximize'><direction>vertical</direction></action></keybind>
 
       <!-- stacked halves -->
-      <keybind key='W-S-Left'> <action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>0</y><width>3840</width><height>1150</height></action></keybind>
-      <keybind key='W-S-Right'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>1200</y><width>3840</width><height>1150</height></action></keybind>
+      <keybind key='W-Up'>  <action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>0</y>   <height>1170</height></action><action name='Maximize'><direction>horizontal</direction></action></keybind>
+      <keybind key='W-Down'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>1170</y><height>1170</height></action><action name='Maximize'><direction>horizontal</direction></action></keybind>
 
       <!-- side-by-side thirds -->
-      <keybind key='W-1'>  <action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>0</y><width>1280</width><height>2350</height></action></keybind>
-      <keybind key='W-S-1'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>0</y><width>2560</width><height>2350</height></action></keybind>
-      <keybind key='W-2'>  <action name="Unmaximize"/><action name='MoveResizeTo'><x>1280</x><y>0</y><width>1280</width><height>2350</height></action></keybind>
-      <keybind key='W-S-2'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1280</x><y>0</y><width>2560</width><height>2350</height></action></keybind>
-      <keybind key='W-3'>  <action name="Unmaximize"/><action name='MoveResizeTo'><x>2560</x><y>0</y><width>1280</width><height>2350</height></action></keybind>
+      <keybind key='W-1'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x>   <y>0</y><width>1280</width></action><action name='Maximize'><direction>vertical</direction></action></keybind>
+      <keybind key='W-2'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1280</x><y>0</y><width>1280</width></action><action name='Maximize'><direction>vertical</direction></action></keybind>
+      <keybind key='W-3'><action name="Unmaximize"/><action name='MoveResizeTo'><x>2560</x><y>0</y><width>1280</width></action><action name='Maximize'><direction>vertical</direction></action></keybind>
+      <keybind key='W-4'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x>   <y>0</y><width>2560</width></action><action name='Maximize'><direction>vertical</direction></action></keybind>
+      <keybind key='W-5'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1280</x><y>0</y><width>2560</width></action><action name='Maximize'><direction>vertical</direction></action></keybind>
 
       <!-- quarters -->
-      <keybind key='W-4'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>0</y><width>1920</width><height>1150</height></action></keybind>
-      <keybind key='W-5'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>0</y><width>1920</width><height>1150</height></action></keybind>
-      <keybind key='W-6'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>1200</y><width>1920</width><height>1150</height></action></keybind>
-      <keybind key='W-7'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>1200</y><width>1920</width><height>1150</height></action></keybind>
+      <keybind key='W-6'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x>   <y>0</y>   <width>1920</width><height>1170</height></action></keybind>
+      <keybind key='W-7'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>0</y>   <width>1920</width><height>1170</height></action></keybind>
+      <keybind key='W-8'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x>   <y>1170</y><width>1920</width><height>1170</height></action></keybind>
+      <keybind key='W-9'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>1170</y><width>1920</width><height>1170</height></action></keybind>
 
       <!-- middle of the screen -->
-      <keybind key='W-g'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
+      <keybind key='W-c'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
 
-      <!--
-      <keybind key='W-1'><action name='MoveResizeTo'><x>0</x><y>0</y></action></keybind>
-      <keybind key='W-2'><action name='MoveResizeTo'><x>1280</x><y>0</y></action></keybind>
-      <keybind key='W-3'><action name='MoveResizeTo'><x>2560</x><y>0</y></action></keybind>
-
-      <keybind key='W-4'><action name='MoveResizeTo'><x>1920</x><y>0</y></action></keybind>
-
-      <keybind key='W-5'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
-
-      <keybind key='W-6'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>0</y><width>1920</width><height>1150</height></action></keybind>
-      <keybind key='W-7'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>0</y><width>1920</width><height>1150</height></action></keybind>
-      <keybind key='W-8'><action name="Unmaximize"/><action name='MoveResizeTo'><x>0</x><y>1200</y><width>1920</width><height>1150</height></action></keybind>
-      <keybind key='W-9'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>1200</y><width>1920</width><height>1150</height></action></keybind>
-
-      <keybind key='W-0'><action name='MoveResizeTo'><width>1920</width></action></keybind>
-      <keybind key='W-minus'><action name='MoveResizeTo'><width>1280</width></action></keybind>
-      <keybind key='W-equal'><action name='MoveResizeTo'><width>2560</width></action></keybind>
-      -->
-
-    <!-- Screenshot -->
   </keyboard>
 </openbox_config>
