@@ -112,7 +112,7 @@
     <!-- App integrations -->
     <keybind key="A-F2"> <action name="Execute"><command>urxvt -geometry 80x3 -name bashrun -e sh -c "/bin/bash -i -t"</command></action></keybind><!-- "run" dialog -->
     <keybind key='Print'><action name='Execute'><command>scrot ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
-    <keybind key='W-q'>  <action name='Execute'><command>xtrlock</command></action></keybind>
+    <keybind key='W-q'>  <action name='Execute'><command>xscreensaver-command -lock</command></action></keybind>
     <keybind key="W-w">  <action name="Execute"><command>google-chrome</command></action></keybind>
     <keybind key="W-e">  <action name="Execute"><command>dolphin</command></action></keybind>
     <keybind key="W-r">  <action name="Execute"><command>urxvt -g 144x30 -e ranger</command></action></keybind>
@@ -146,14 +146,10 @@
     <keybind key="W-S-Tab"><action name="PreviousWindow"><allDesktops>yes</allDesktops></action></keybind>
 
     <!-- Windows -->
-    <!--
-    <keybind key='W-Up'>  <action name='Maximize'></action></keybind>
-    <keybind key='W-Down'><action name='Unmaximize'></action></keybind>
-    -->
-    <keybind key='W-f'>   <action name='ToggleMaximize'></action></keybind>
-    <keybind key='W-g'>   <action name='ToggleMaximize'><direction>horizontal</direction></action></keybind>
-    <keybind key='W-v'>   <action name='ToggleMaximize'><direction>vertical</direction></action></keybind>
-    <keybind key="W-d">   <action name="ToggleShowDesktop"/></keybind>
+    <keybind key='W-f'><action name='ToggleMaximize'></action></keybind>
+    <keybind key='W-g'><action name='ToggleMaximize'><direction>horizontal</direction></action></keybind>
+    <keybind key='W-v'><action name='ToggleMaximize'><direction>vertical</direction></action></keybind>
+    <keybind key="W-d"><action name="ToggleShowDesktop"/></keybind>
 
     <!-- Window tiling -->
       <!-- Screen is 3840 x 2400. Tint2 menu bar is 60 tall. -->

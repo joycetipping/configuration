@@ -24,6 +24,7 @@ init_session() {
     conky &
     sleep 3
     xrdb ~/.Xresources
+    xscreensaver &
 
     wifi 35
     sudo wg-quick up wg0
