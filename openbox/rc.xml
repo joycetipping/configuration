@@ -27,7 +27,7 @@
   </theme>
 
   <desktops>
-    <number>10</number>
+    <number>13</number>
     <firstdesk>1</firstdesk>
     <popupTime>200</popupTime>
   </desktops>
@@ -110,8 +110,12 @@
     <keybind key='W-A-h'>  <action name='Execute'><command>sh -c "echo 'connect 00:00:AB:CE:8E:C6' | bluetoothctl"</command></action></keybind>
 
     <!-- App integrations -->
+
+    <keybind key='W-Print'>  <action name='Execute'><command>scrot ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
+    <keybind key='S-Print'>  <action name='Execute'><command>scrot -u ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
+    <keybind key='C-A-Print'><action name='Execute'><command>scrot -s ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
+
     <keybind key="A-F2"> <action name="Execute"><command>urxvt -geometry 80x3 -name bashrun -e sh -c "/bin/bash -i -t"</command></action></keybind><!-- "run" dialog -->
-    <keybind key='Print'><action name='Execute'><command>scrot ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
     <keybind key='W-q'>  <action name='Execute'><command>xscreensaver-command -lock</command></action></keybind>
     <keybind key="W-w">  <action name="Execute"><command>google-chrome</command></action></keybind>
     <keybind key="W-e">  <action name="Execute"><command>dolphin</command></action></keybind>
@@ -138,6 +142,19 @@
     <keybind key="W-Next">   <action name="DesktopRight"/></keybind><!-- PageDown -->
     <keybind key="S-W-Prior"><action name="SendToDesktopLeft"/></keybind>
     <keybind key="S-W-Next"> <action name="SendToDesktopRight"/></keybind>
+
+    <!--
+    <keybind key="A-1"><action name="GoToDesktop"><to>1</to></action></keybind>
+    <keybind key="A-2"><action name="GoToDesktop"><to>2</to></action></keybind>
+    <keybind key="A-3"><action name="GoToDesktop"><to>3</to></action></keybind>
+    <keybind key="A-4"><action name="GoToDesktop"><to>4</to></action></keybind>
+    <keybind key="A-5"><action name="GoToDesktop"><to>5</to></action></keybind>
+    <keybind key="A-6"><action name="GoToDesktop"><to>6</to></action></keybind>
+    <keybind key="A-7"><action name="GoToDesktop"><to>7</to></action></keybind>
+    <keybind key="A-8"><action name="GoToDesktop"><to>8</to></action></keybind>
+    <keybind key="A-9"><action name="GoToDesktop"><to>9</to></action></keybind>
+    <keybind key="A-0"><action name="GoToDesktop"><to>10</to></action></keybind>
+    -->
 
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">  <action name="NextWindow"/></keybind>
