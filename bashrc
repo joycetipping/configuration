@@ -67,6 +67,7 @@ alias evf="curl http://192.168.0.34:8180/4"  # turn evaporative to fan
 alias evc="curl http://192.168.0.34:8180/5"  # turn evaporative to cool
 
 # Date and time
+alias cal="ncal -C"
 alias d="date"
 alias now="date '+%A %-d %B %Y %H:%M:%S %Z'"
 
