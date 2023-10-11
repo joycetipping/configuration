@@ -115,7 +115,8 @@
     <keybind key='S-Print'>  <action name='Execute'><command>scrot -u ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
     <keybind key='C-A-Print'><action name='Execute'><command>scrot -s ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
 
-    <keybind key="A-F2"> <action name="Execute"><command>urxvt -geometry 80x3 -name bashrun -e sh -c "/bin/bash -i -t"</command></action></keybind><!-- "run" dialog -->
+    <!--<keybind key="A-F2"> <action name="Execute"><command>urxvt -geometry 80x3 -name bashrun -e sh -c "/bin/bash -i -t"</command></action></keybind>"run" dialog -->
+    <keybind key="A-F2"> <action name="Execute"><command>gmrun</command></action></keybind>
     <keybind key='W-q'>  <action name='Execute'><command>xscreensaver-command -lock</command></action></keybind>
     <keybind key="W-w">  <action name="Execute"><command>google-chrome</command></action></keybind>
     <keybind key="W-e">  <action name="Execute"><command>dolphin</command></action></keybind>
@@ -193,6 +194,7 @@
       <keybind key='W-9'><action name="Unmaximize"/><action name='MoveResizeTo'><x>1920</x><y>1170</y><width>1920</width><height>1170</height></action></keybind>
 
       <!-- middle of the screen -->
+      <keybind key='W-0'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
       <keybind key='W-c'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
 
   </keyboard>
