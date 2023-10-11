@@ -19,6 +19,7 @@ set textwidth=80
 "Search options
 set hlsearch
 set ignorecase
+set smartcase
 set incsearch
 "Folds
 set foldcolumn=0
