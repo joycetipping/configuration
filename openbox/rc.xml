@@ -111,9 +111,12 @@
 
     <!-- App integrations -->
 
-    <keybind key='W-Print'>  <action name='Execute'><command>scrot ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
-    <keybind key='S-Print'>  <action name='Execute'><command>scrot -u ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
-    <keybind key='C-A-Print'><action name='Execute'><command>scrot -s ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind>
+    <!--Screencapture-->
+    <keybind key='W-Print'><action name='Execute'><command>scrot    ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--whole screen-->
+    <keybind key='S-Print'><action name='Execute'><command>scrot -u ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--window-->
+    <keybind key='C-Print'><action name='Execute'><command>scrot -s ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--select rectangle-->
+    <keybind key='W-A-Print'><action name='Execute'><command>scrot    -p ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--whole screen with pointer-->
+    <keybind key='S-A-Print'><action name='Execute'><command>scrot -u -p ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--window with pointer-->
 
     <!--<keybind key="A-F2"> <action name="Execute"><command>urxvt -geometry 80x3 -name bashrun -e sh -c "/bin/bash -i -t"</command></action></keybind>"run" dialog -->
     <keybind key="A-F2"> <action name="Execute"><command>gmrun</command></action></keybind>
