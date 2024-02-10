@@ -8,11 +8,11 @@
 
   <focus>
     <focusNew>yes</focusNew>
-    <followMouse>yes</followMouse>
+    <followMouse>no</followMouse>
     <focusLast>yes</focusLast>
     <!--<underMouse>yes</underMouse>-->
     <focusDelay>0</focusDelay>
-    <raiseOnFocus>no</raiseOnFocus>
+    <raiseOnFocus>yes</raiseOnFocus>
   </focus>
 
   <placement>
@@ -122,6 +122,7 @@
     <keybind key="A-F2"> <action name="Execute"><command>gmrun</command></action></keybind>
     <keybind key='W-q'>  <action name='Execute'><command>xscreensaver-command -lock</command></action></keybind>
     <keybind key="W-w">  <action name="Execute"><command>google-chrome</command></action></keybind>
+    <keybind key="W-S-w"><action name="Execute"><command>firefox</command></action></keybind>
     <keybind key="W-e">  <action name="Execute"><command>dolphin</command></action></keybind>
     <keybind key="W-r">  <action name="Execute"><command>urxvt -g 144x30 -e ranger</command></action></keybind>
     <keybind key="W-t">  <action name="Execute"><command>urxvt</command></action></keybind>
