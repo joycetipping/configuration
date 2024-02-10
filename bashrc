@@ -86,12 +86,16 @@ alias weibo="firejail --disable-mnt --private=/home/joyce/weibo --private-tmp --
 alias noclick="xinput set-prop 12 'libinput Tapping Enabled' 0"
 alias yesclick="xinput set-prop 12 'libinput Tapping Enabled' 1"
 
+# VLC
+alias stopchrome="pkill -STOP chrome"
+alias startchrome="pkill -CONT chrome"
+
 # Other
 alias bc="echo Starting bc -l;echo;bc -l"
 alias ghci="stack ghci"
 alias grep="grep --color"
 alias pyserver='python -m SimpleHTTPServer 8080'
-alias sus='sudo pm-suspend'
+alias sus='sudo systemctl suspend'
 alias sizes='du -sh | sort -h'
 
 # }}}
