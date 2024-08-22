@@ -26,6 +26,12 @@ init_session() {
     xrdb ~/.Xresources
     xscreensaver &
 
+    # This series of steps fixes the long startup times for certain gnome apps,   # most notably evince and pavucontrol
+    systemctl --user import-environment DISPLAY XAUTHORITY
+    systemctl --user daemon-reload
+    systemctl --user restart xdg-desktop-portal
+    systemctl --user restart xdg-desktop-portal-gtk
+
     wifi 35
     sudo wg-quick up wg0
     sudo mount /mnt/v1
