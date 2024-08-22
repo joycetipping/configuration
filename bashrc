@@ -83,8 +83,8 @@ alias kidsroom="ssh iridium 'arecord -f cd -t wav' | play -t wav - compand .01,.
 alias facebook="firejail --disable-mnt --private=/home/joyce/facebook --private-tmp --nodbus google-chrome"
 alias tiktok="firejail --disable-mnt --private=/home/joyce/tiktok --private-tmp --nodbus google-chrome"
 alias weibo="firejail --disable-mnt --private=/home/joyce/weibo --private-tmp --nodbus firefox"
-alias noclick="xinput set-prop 12 'libinput Tapping Enabled' 0"
-alias yesclick="xinput set-prop 12 'libinput Tapping Enabled' 1"
+alias noclick="xinput set-prop 11 'libinput Tapping Enabled' 0"
+alias yesclick="xinput set-prop 11 'libinput Tapping Enabled' 1"
 
 # VLC
 alias stopchrome="pkill -STOP chrome"
@@ -186,3 +186,6 @@ PATH="$PATH:$HOME/.local/bin"
 
 # }}}
 
+
+unset GDK_SCALE
+unset QT_SCALE_FACTOR
