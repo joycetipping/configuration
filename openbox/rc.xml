@@ -66,7 +66,7 @@
   </menu>
 
   <applications>
-    <application name='*'><decor>no</decor><shade>no</shade></application>
+    <application name='*'><decor>yes</decor><shade>no</shade></application>
     <application name='audacious'><desktop>all</desktop> <layer>normal</layer></application>
     <application name='Conky'><layer>below</layer></application>
   </applications>
@@ -85,14 +85,14 @@
     <keybind key='XF86MonBrightnessUp'>    <action name='Execute'><command>backlight +50</command></action></keybind>
     <keybind key='XF86MonBrightnessDown'>  <action name='Execute'><command>backlight -50</command></action></keybind>
     <keybind key='S-XF86MonBrightnessUp'>  <action name='Execute'><command>backlight max</command></action></keybind>
-    <keybind key='S-XF86MonBrightnessDown'><action name='Execute'><command>backlight 50</command></action></keybind>
+    <keybind key='S-XF86MonBrightnessDown'><action name='Execute'><command>backlight 1</command></action></keybind>
 
     <!-- Audio -->
-    <keybind key='XF86AudioLowerVolume'>  <action name='Execute'><command>vol-delta-pa -8192</command></action></keybind>
-    <keybind key='XF86AudioRaiseVolume'>  <action name='Execute'><command>vol-delta-pa 8192</command></action></keybind>
-    <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-delta-pa -2048</command></action></keybind>
-    <keybind key='S-XF86AudioRaiseVolume'><action name='Execute'><command>vol-delta-pa 2048</command></action></keybind>
-    <keybind key='XF86AudioMute'>         <action name='Execute'><command>vol-absolute-pa 0</command></action></keybind>
+    <keybind key='XF86AudioLowerVolume'>  <action name='Execute'><command>vol-pipewire -5</command></action></keybind>
+    <keybind key='XF86AudioRaiseVolume'>  <action name='Execute'><command>vol-pipewire +5</command></action></keybind>
+    <keybind key='S-XF86AudioLowerVolume'><action name='Execute'><command>vol-pipewire -1</command></action></keybind>
+    <keybind key='S-XF86AudioRaiseVolume'><action name='Execute'><command>vol-pipewire +1</command></action></keybind>
+    <keybind key='XF86AudioMute'>         <action name='Execute'><command>vol-pipewire 0</command></action></keybind>
 
     <!-- Audacious stuff
     <keybind key='W-a'><action name='Execute'>   <command>audacious</command></action></keybind>
@@ -106,18 +106,17 @@
     -->
 
     <!-- Reconnection for silly headset that keeps getting out of sync -->
-    <keybind key='W-A-S-h'><action name='Execute'><command>sh -c "echo 'disconnect 00:00:AB:CE:8E:C6' | bluetoothctl"</command></action></keybind>
-    <keybind key='W-A-h'>  <action name='Execute'><command>sh -c "echo 'connect 00:00:AB:CE:8E:C6' | bluetoothctl"</command></action></keybind>
+    <keybind key='W-A-S-h'><action name='Execute'><command>sh -c "echo 'disconnect 00:00:AB:CD:19:79' | bluetoothctl"</command></action></keybind>
+    <keybind key='W-A-h'>  <action name='Execute'><command>sh -c "echo 'connect 00:00:AB:CD:19:79' | bluetoothctl"</command></action></keybind>
 
     <!-- App integrations -->
 
     <!--Screencapture-->
-    <keybind key='W-Print'><action name='Execute'><command>scrot    ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--whole screen-->
-    <keybind key='S-Print'><action name='Execute'><command>scrot -u ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--window-->
-    <keybind key='C-Print'><action name='Execute'><command>scrot -s ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--select rectangle-->
-    <keybind key='W-A-Print'><action name='Execute'><command>scrot    -p ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--whole screen with pointer-->
-    <keybind key='S-A-Print'><action name='Execute'><command>scrot -u -p ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--window with pointer-->
-
+    <keybind key='W-s'>  <action name='Execute'><command>scrot -u -b       ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--window with border-->
+    <keybind key='W-A-s'><action name='Execute'><command>scrot -u -b    -p ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--window with border with pointer-->
+    <keybind key='W-a'>  <action name='Execute'><command>scrot             ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--whole screen-->
+    <keybind key='W-A-a'><action name='Execute'><command>scrot          -p ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--whole screen with pointer-->
+    <keybind key='W-C-s'><action name='Execute'><command>scrot       -s    ~/Pictures/Screenshots/screenshot-%Y.%m.%d.%H%M%S.png</command></action></keybind><!--select rectangle-->
     <!--<keybind key="A-F2"> <action name="Execute"><command>urxvt -geometry 80x3 -name bashrun -e sh -c "/bin/bash -i -t"</command></action></keybind>"run" dialog -->
     <keybind key="A-F2"> <action name="Execute"><command>gmrun</command></action></keybind>
     <keybind key='W-q'>  <action name='Execute'><command>xscreensaver-command -lock</command></action></keybind>
@@ -127,7 +126,7 @@
     <keybind key="W-r">  <action name="Execute"><command>urxvt -g 144x30 -e ranger</command></action></keybind>
     <keybind key="W-t">  <action name="Execute"><command>urxvt</command></action></keybind>
     <keybind key="W-S-t"><action name="Execute"><command>terminator</command></action></keybind>
-    <keybind key='W-s'>  <action name='Execute'><command>pavucontrol</command></action></keybind>
+    <keybind key='W-p'>  <action name='Execute'><command>pavucontrol</command></action></keybind>
 
     <!-- Backgrounds -->
     <keybind key='W-S-o'><action name='Execute'><command>xset dpms force off</command></action></keybind>
@@ -200,6 +199,5 @@
       <!-- middle of the screen -->
       <keybind key='W-0'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
       <keybind key='W-c'><action name="Unmaximize"/><action name='MoveResizeTo'><x>960</x><y>600</y><width>1920</width><height>1150</height></action></keybind>
-
   </keyboard>
 </openbox_config>
